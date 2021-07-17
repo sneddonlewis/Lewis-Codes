@@ -2,7 +2,7 @@ import React from "react";
 import { FaGithub, FaRocket } from 'react-icons/fa';
 import {Button} from "reactstrap";
 
-const Project = (props) => {
+const Project = (props: { title: string, description: string, codeUrl: string, launchUrl: string, techStack: string[], launchable: boolean}) => {
 	return (
 		<div className="col-sm-3 m-auto mt-4" style={{ width: "20rem" }}>
 			<div className="card">
