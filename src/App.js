@@ -5,27 +5,13 @@ import './App.css';
 
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import NavBar from "./layout/header/navbar";
-import Certifications from "./components/certifications/Certifications";
-import Skills from "./components/skills/Skills";
-import Projects from "./components/projects/Projects";
-import About from "./components/about/About";
+import Body from "./layout/body/Body";
 
 function App() {
   return (
     <div className="App">
         <NavBar />
-        <About />
-        <BrowserRouter>
-            <Route path="/projects">
-                <Projects />
-            </Route>
-            <Route path="/certifications">
-                <Certifications />
-            </Route>
-            <Route path="/skills">
-                <Skills />
-            </Route>
-        </BrowserRouter>
+        <Body />
     </div>
   );
 }

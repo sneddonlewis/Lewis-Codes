@@ -1,4 +1,5 @@
 import React from "react";
+import List from "reactstrap/es/List";
 
 const iconSrc = {
 	kotlin:
@@ -33,8 +34,15 @@ const Skills = () => {
 	return (
 			<div>
 				<h1 className="alert alert-primary">Skills</h1>
-				<div className="subheading mb-3">Tech Skills</div>
-				<ul className="list-inline dev-icons">
+				<List type="unstyled" className="m-5">
+					<li>Object Oriented design Principles and Patterns</li>
+					<li>Developing and consuming RESTful web APIs</li>
+					<li>User Interface programming for desktopm web and mobile</li>
+					<li>Interacting with structured and semi-structured data</li>
+					<li>Scripting, version control and cloud</li>
+				</List>
+				<h3 className="m-5">Technologies</h3>
+				<ul className="list-inline m-5">
 					<li className="list-inline-item">
 						{/* Java */}
 						<img src={iconSrc["java"]} alt="Java logo" />
