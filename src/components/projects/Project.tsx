@@ -18,6 +18,9 @@ const Project = (props) => {
 								case "js":
 									image = <img src={iconSrc["js"]} alt="JavaScript logo" />;
 									break;
+								case "ts":
+									image = <img src={iconSrc["typeScript"]} alt="TypeScript logo" />;
+									break;
 								case "java":
 									image = <img src={iconSrc["java"]} alt="Java logo" />;
 									break;

@@ -1,4 +1,5 @@
 import React from "react";
+import './Certifications.css';
 
 const Certifications = () => {
 	return (
@@ -15,9 +16,6 @@ const Certifications = () => {
 								className="cert-badges"
 								src="https://images.credly.com/size/340x340/images/6a254dad-77e5-4e71-8049-94e5c7a15981/azure-fundamentals-600x600.png"
 								alt="Microsoft Azure Fundamentals"
-								style={{
-									"max-width": "150px"
-								}}
 							/>
 						</a>
 					</li>
