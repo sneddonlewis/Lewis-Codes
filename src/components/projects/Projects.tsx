@@ -11,7 +11,7 @@ function Projects() {
 		if(activeTab !== tab) setActiveTab(tab);
 	}
 	return (
-		<div>
+		<div className="mb-5">
 			<h1 className="alert alert-primary">Projects</h1>
 			<Nav tabs className="nav-fill">
 				<NavItem>
@@ -49,7 +49,7 @@ function Projects() {
 			</Nav>
 			<TabContent activeTab={activeTab}>
 				<TabPane tabId="1">
-					<div className="row">
+					<div className="row align-content-center">
 						{webProjects.map((i) => {
 							return (
 								<Project

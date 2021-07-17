@@ -4,7 +4,7 @@ import {Button} from "reactstrap";
 
 const Project = (props) => {
 	return (
-		<div className="col-sm-3 m-3" style={{ width: "20rem" }}>
+		<div className="col-sm-3 m-auto mt-4" style={{ width: "20rem" }}>
 			<div className="card">
 				<div className="card-header">
 					<h3>{props.title}</h3>
