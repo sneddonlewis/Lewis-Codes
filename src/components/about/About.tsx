@@ -1,6 +1,7 @@
 import React from 'react';
 import {Envelope} from "react-bootstrap-icons";
 import Icons from "../social/Icons";
+import List from "reactstrap/es/List";
 
 function About() {
 	return (
@@ -11,6 +12,13 @@ function About() {
 				<a href="mailto:lewis@lewiscodes.io"><Envelope /></a>
 			</div>
 			<Icons />
+			<List type="unstyled" className="m-5">
+				<li>Object Oriented design Principles and Patterns</li>
+				<li>Developing and consuming RESTful web APIs</li>
+				<li>User Interface programming for desktopm web and mobile</li>
+				<li>Interacting with structured and semi-structured data</li>
+				<li>Scripting, version control and cloud</li>
+			</List>
 		</div>
 	);
 }
