@@ -3,15 +3,14 @@ import {Envelope} from "react-bootstrap-icons";
 import Icons from "../social/Icons";
 import List from "reactstrap/es/List";
 import ModalContainer from "../../modal/ModalContainer";
-import {Button, Modal, ModalBody} from "reactstrap";
+import {Button} from "reactstrap";
+import SendEmail from "../../modal/SendEmail";
 
 function About() {
-	const [state, setState] = useState({ showModal: false });
+	const [showModal, setShowModal] = useState(false );
 
 	function toggleModal() {
-		console.log("toggle modal called");
-		setState({ showModal: !state.showModal });
-		console.log(state);
+		setShowModal(!showModal );
 	}
 	return (
 		<div className="m-5">
@@ -22,33 +21,7 @@ function About() {
 					onClick={toggleModal}
 
 				><Envelope /></Button>
-				{
-					state.showModal ? (
-						<ModalContainer>
-							<div>
-								<div className="m-4">
-									Send an email with your default Mail app to lewis@lewiscodes.io ?
-								</div>
-								<div className="text-end">
-									<Button
-										className="m-2"
-										outline
-										size="sm"
-										color="warning"
-										onClick={toggleModal}
-									>Cancel</Button>
-									<Button
-										className="m-2"
-										outline
-										size="sm"
-										color="primary"
-										href="mailto:lewis@lewiscodes.io"
-									>Ok</Button>
-								</div>
-							</div>
-						</ModalContainer>
-					) : null
-				}
+				<SendEmail showModal={showModal} toggleModal={toggleModal}/>
 			</div>
 			<Icons />
 			<List type="unstyled" className="m-5">

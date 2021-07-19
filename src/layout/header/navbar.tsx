@@ -1,6 +1,15 @@
-import React from 'react';
+import React, {useState} from "react";
+import ModalContainer from "../../modal/ModalContainer";
+import {Button} from "reactstrap";
+import SendEmail from "../../modal/SendEmail";
 
-const NavBar = () => {
+
+function NavBar(){
+	const [showModal, setShowModal] = useState(false );
+
+	function toggleModal() {
+		setShowModal(!showModal );
+	}
 	return (
 		<nav className="navbar bg-dark navbar-dark navbar-expand-lg" id="sideNav">
 			<a className="navbar-brand p-3 mr-auto" href="/">
@@ -34,8 +43,14 @@ const NavBar = () => {
 							Skills
 						</a>
 					</li>
+					<li className="nav-item">
+						<a className="nav-link" onClick={toggleModal}>
+							Contact
+						</a>
+					</li>
 				</ul>
 			</div>
+			<SendEmail showModal={showModal} toggleModal={toggleModal}/>
 		</nav>
 	);
 };
