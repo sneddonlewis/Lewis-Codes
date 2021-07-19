@@ -1,9 +1,9 @@
-import React, {ReactNode, useState} from "react";
+import React, {useState} from "react";
 import SendEmail from "../../modal/SendEmail";
 import {NavItem, NavLink} from "reactstrap";
 
 
-function NavBar(): ReactNode {
+function NavBar() {
 	const [showModal, setShowModal] = useState(false );
 
 	function toggleModal() {
