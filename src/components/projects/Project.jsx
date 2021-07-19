@@ -8,7 +8,9 @@ const Project = (props) => {
 			<div className="card">
 				<div className="card-header">
 					<h3>{props.title}</h3>
-					<ul className="list-inline">
+				</div>
+				<div className="card-body">
+					<ul className="text-start">
 						{props.techStack.map((i) => {
 							let image;
 							switch (i) {
@@ -42,21 +44,31 @@ const Project = (props) => {
 							return <li className="list-inline-item">{image}</li>;
 						})}
 					</ul>
-				</div>
-				<div className="card-body">
-					<p className="card-text">{props.description}</p>
-					{props.launchable && (
-						<a href={props.launchUrl} target="_blank" rel="noreferrer">
-							<Button className="btn btn-outline-dark btn-md m-2">
-								<FaRocket /> Demo
+					<p className="text-start">{props.description}</p>
+					<div className="text-end">
+						{props.launchable && (
+							<a href={props.launchUrl} target="_blank" rel="noreferrer">
+								<Button
+									className="ms-1"
+									outline
+									color="dark"
+									size="sm"
+								>
+									<FaRocket /> Demo
+								</Button>
+							</a>
+						)}
+						<a href={props.codeUrl} target="_blank" rel="noreferrer">
+							<Button
+								className="ms-1"
+								outline
+								color="dark"
+								size="sm"
+							>
+								<FaGithub /> Code
 							</Button>
 						</a>
-					)}
-					<a href={props.codeUrl} target="_blank" rel="noreferrer">
-						<Button className="btn btn-outline-dark btn-md m-2">
-							<FaGithub /> Code
-						</Button>
-					</a>
+					</div>
 				</div>
 			</div>
 		</div>
