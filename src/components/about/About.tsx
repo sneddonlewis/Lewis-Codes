@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React, {ReactNode, useState} from 'react';
 import {Envelope} from "react-bootstrap-icons";
 import Icons from "../social/Icons";
 import List from "reactstrap/es/List";
 import {Button} from "reactstrap";
 import SendEmail from "../../modal/SendEmail";
 
-function About() {
+function About(): ReactNode {
 	const [showModal, setShowModal] = useState(false );
 
 	function toggleModal() {
