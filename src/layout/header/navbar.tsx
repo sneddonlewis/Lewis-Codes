@@ -1,7 +1,6 @@
 import React, {useState} from "react";
-import ModalContainer from "../../modal/ModalContainer";
-import {Button} from "reactstrap";
 import SendEmail from "../../modal/SendEmail";
+import {NavItem, NavLink} from "reactstrap";
 
 
 function NavBar(){
@@ -28,26 +27,26 @@ function NavBar(){
 			</button>
 			<div className="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul className="navbar-nav">
-					<li className="nav-item">
-						<a className="nav-link js-scroll-trigger" href="/projects">
+					<NavItem>
+						<NavLink href="/projects">
 							Projects
-						</a>
-					</li>
-					<li className="nav-item">
-						<a className="nav-link js-scroll-trigger" href="/certifications">
+						</NavLink>
+					</NavItem>
+					<NavItem>
+						<NavLink href="/certifications">
 							Certifications
-						</a>
-					</li>
-					<li className="nav-item">
-						<a className="nav-link js-scroll-trigger" href="/skills">
+						</NavLink>
+					</NavItem>
+					<NavItem>
+						<NavLink href="/skills">
 							Skills
-						</a>
-					</li>
-					<li className="nav-item">
-						<a className="nav-link" onClick={toggleModal}>
+						</NavLink>
+					</NavItem>
+					<NavItem>
+						<NavLink onClick={toggleModal} href="#">
 							Contact
-						</a>
-					</li>
+						</NavLink>
+					</NavItem>
 				</ul>
 			</div>
 			<SendEmail showModal={showModal} toggleModal={toggleModal}/>

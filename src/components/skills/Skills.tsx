@@ -1,5 +1,4 @@
 import React from "react";
-import List from "reactstrap/es/List";
 
 const iconSrc = {
 	kotlin:

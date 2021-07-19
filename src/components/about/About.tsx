@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {Envelope} from "react-bootstrap-icons";
 import Icons from "../social/Icons";
 import List from "reactstrap/es/List";
-import ModalContainer from "../../modal/ModalContainer";
 import {Button} from "reactstrap";
 import SendEmail from "../../modal/SendEmail";
 
