@@ -6,7 +6,7 @@ interface Props {
 	techStack: string[];
 	description: string;
 	launchable: boolean;
-	launchUrl: string;
+	launchUrl?: string;
 	codeUrl: string;
 }
 

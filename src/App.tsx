@@ -9,7 +9,7 @@ import Footer from "./layout/footer/Footer";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App d-flex flex-column min-vh-100">
         <NavBar />
         <Body/>
         <Footer />
