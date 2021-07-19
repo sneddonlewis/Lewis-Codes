@@ -23,13 +23,13 @@ function About() {
 				<SendEmail showModal={showModal} toggleModal={toggleModal}/>
 			</div>
 			<Icons />
-			<List type="unstyled" className="m-5">
-				<li>Object Oriented design Principles and Patterns</li>
-				<li>Developing and consuming RESTful web APIs</li>
-				<li>User Interface programming for desktopm web and mobile</li>
-				<li>Interacting with structured and semi-structured data</li>
-				<li>Scripting, version control and cloud</li>
-			</List>
+			<div className="m-5">
+				<p>Object Oriented design Principles and Patterns</p>
+				<p>Developing and consuming RESTful web APIs</p>
+				<p>User Interface programming for desktop, web and mobile</p>
+				<p>Interacting with structured and semi-structured data</p>
+				<p>Scripting, version control and cloud</p>
+			</div>
 		</div>
 	);
 }
