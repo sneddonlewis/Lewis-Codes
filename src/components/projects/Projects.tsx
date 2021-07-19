@@ -7,7 +7,7 @@ import Project from "./Project";
 function Projects() {
 	const [activeTab, setActiveTab] = useState('1');
 
-	const toggle = tab => {
+	const toggle = (tab: string) => {
 		if(activeTab !== tab) setActiveTab(tab);
 	}
 	return (
@@ -56,7 +56,7 @@ function Projects() {
 									title={i.title}
 									description={i.description}
 									codeUrl={i.codeUrl}
-									launchUrl={i.launchUrl}
+									launchUrl={i.launchUrl || ""}
 									techStack={i.techStack}
 									launchable={i.launchable}
 									key={i.title}
@@ -73,7 +73,7 @@ function Projects() {
 									title={i.title}
 									description={i.description}
 									codeUrl={i.codeUrl}
-									launchUrl={i.launchUrl}
+									launchUrl={i.launchUrl || ""}
 									techStack={i.techStack}
 									launchable={i.launchable}
 									key={i.title}
@@ -90,7 +90,7 @@ function Projects() {
 									title={i.title}
 									description={i.description}
 									codeUrl={i.codeUrl}
-									launchUrl={i.launchUrl}
+									launchUrl={i.launchUrl || ""}
 									techStack={i.techStack}
 									launchable={i.launchable}
 									key={i.title}
@@ -107,7 +107,7 @@ function Projects() {
 									title={i.title}
 									description={i.description}
 									codeUrl={i.codeUrl}
-									launchUrl={i.launchUrl}
+									launchUrl={i.launchUrl || ""}
 									techStack={i.techStack}
 									launchable={i.launchable}
 									key={i.title}

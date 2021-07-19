@@ -1,4 +1,3 @@
-import {ReactNode} from "react";
 import { FaGithub, FaRocket } from 'react-icons/fa';
 import {Button} from "reactstrap";
 
@@ -11,7 +10,7 @@ interface Props {
 	codeUrl: string;
 }
 
-function Project(props: Props): ReactNode {
+function Project(props: Props) {
 	const {title, techStack, description, launchable, launchUrl, codeUrl} = props
 	return (
 		<div className="col-sm-3 m-auto mt-4" style={{ width: "20rem" }}>
