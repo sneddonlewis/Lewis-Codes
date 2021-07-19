@@ -1,17 +1,27 @@
-import React from "react";
+import {ReactNode} from "react";
 import { FaGithub, FaRocket } from 'react-icons/fa';
 import {Button} from "reactstrap";
 
-const Project = (props) => {
+interface Props {
+	title: string;
+	techStack: string[];
+	description: string;
+	launchable: boolean;
+	launchUrl: string;
+	codeUrl: string;
+}
+
+function Project(props: Props): ReactNode {
+	const {title, techStack, description, launchable, launchUrl, codeUrl} = props
 	return (
 		<div className="col-sm-3 m-auto mt-4" style={{ width: "20rem" }}>
 			<div className="card">
 				<div className="card-header">
-					<h3>{props.title}</h3>
+					<h3>{title}</h3>
 				</div>
 				<div className="card-body">
 					<ul className="text-start">
-						{props.techStack.map((i) => {
+						{techStack.map((i) => {
 							let image;
 							switch (i) {
 								case "kotlin":
@@ -44,10 +54,10 @@ const Project = (props) => {
 							return <li className="list-inline-item">{image}</li>;
 						})}
 					</ul>
-					<p className="text-start">{props.description}</p>
+					<p className="text-start">{description}</p>
 					<div className="text-end">
-						{props.launchable && (
-							<a href={props.launchUrl} target="_blank" rel="noreferrer">
+						{launchable && (
+							<a href={launchUrl} target="_blank" rel="noreferrer">
 								<Button
 									className="ms-1"
 									outline
@@ -58,7 +68,7 @@ const Project = (props) => {
 								</Button>
 							</a>
 						)}
-						<a href={props.codeUrl} target="_blank" rel="noreferrer">
+						<a href={codeUrl} target="_blank" rel="noreferrer">
 							<Button
 								className="ms-1"
 								outline
@@ -73,7 +83,7 @@ const Project = (props) => {
 			</div>
 		</div>
 	);
-};
+}
 
 const iconSrc = {
 	kotlin:
