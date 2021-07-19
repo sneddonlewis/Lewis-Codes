@@ -1,8 +1,13 @@
 import ModalContainer from "./ModalContainer";
 import {Button} from "reactstrap";
-import React from "react";
+import React, {MouseEventHandler} from "react";
 
-function SendEmail({showModal, toggleModal}) {
+interface Props {
+    showModal: boolean;
+    toggleModal: MouseEventHandler<HTMLElement>;
+}
+
+function SendEmail({showModal, toggleModal}: Props) {
     return (
         <>
             {
