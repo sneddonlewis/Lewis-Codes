@@ -145,6 +145,33 @@ const mobileProjects = [
 
 const desktopProjects = [
 	{
+		title: "JSON Database",
+		description: "An in-memory database that stores JSON objects. Includes a command line client",
+		codeUrl:
+			"https://github.com/codeslewis/Json_Database/tree/master/JSON%20Database/task/src",
+		launchable: false,
+		launchUrl: null,
+		techStack: ["java"],
+	},
+	{
+		title: "Text Encryption",
+		description: "Encrypt and Decrypt text via files or command line arguments using a shift or a unicode encryption algorithm",
+		codeUrl:
+			"https://github.com/codeslewis/encryptor",
+		launchable: false,
+		launchUrl: null,
+		techStack: ["java"],
+	},
+	{
+		title: "Matrix Calculator",
+		description: "Performs math operations on numeric matrices",
+		codeUrl:
+			"https://github.com/codeslewis/Matrix_Calculator",
+		launchable: false,
+		launchUrl: null,
+		techStack: ["java"],
+	},
+	{
 		title: "Noughts and Crosses",
 		description: `Java Desktop Noughts and Crosses game using the swing library for GUI`,
 		codeUrl:
@@ -167,33 +194,6 @@ const desktopProjects = [
 		description: "A Battleship game for terminal.",
 		codeUrl:
 			"https://github.com/codeslewis/Battleship/tree/master/Battleship/task/src/battleship",
-		launchable: false,
-		launchUrl: null,
-		techStack: ["java"],
-	},
-	{
-		title: "Matrix Calculator",
-		description: "Performs math operations on numeric matrices",
-		codeUrl:
-			"https://github.com/codeslewis/Matrix_Calculator",
-		launchable: false,
-		launchUrl: null,
-		techStack: ["java"],
-	},
-	// {
-	// 	title: "Noughts and Crosses",
-	// 	description: "An interactive game for one or two players",
-	// 	codeUrl:
-	// 		"https://github.com/codeslewis/Tic-Tac-Toe_with_AI/tree/master/Tic-Tac-Toe%20with%20AI/task/src/tictactoe",
-	// 	launchable: false,
-	// 	launchUrl: null,
-	// 	techStack: ["java"],
-	// },
-	{
-		title: "Text Encryption",
-		description: "Encrypt and Decrypt text via files or command line using a shift or a unicode encryption algorithm",
-		codeUrl:
-			"https://github.com/codeslewis/encryptor",
 		launchable: false,
 		launchUrl: null,
 		techStack: ["java"],
