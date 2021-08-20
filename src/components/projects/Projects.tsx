@@ -124,7 +124,7 @@ const webProjects = [
 	{
 		title: "Lewis Codes",
 		description: "This site. A React SPA",
-		codeUrl: "https://github.com/codeslewis/Portfolio_Site_React",
+		codeUrl: "https://github.com/codeslewis/Lewis-Codes",
 		launchable: false,
 		launchUrl: "",
 		techStack: ["react", "ts", "node"],
