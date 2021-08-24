@@ -146,7 +146,7 @@ const mobileProjects = [
 const desktopProjects = [
 	{
 		title: "JSON Database",
-		description: "An in-memory database that stores JSON objects. Includes a command line client",
+		description: "A multithreaded document database that stores data in a json file. Includes a command line client",
 		codeUrl:
 			"https://github.com/codeslewis/Json_Database/tree/master/JSON%20Database/task/src",
 		launchable: false,
