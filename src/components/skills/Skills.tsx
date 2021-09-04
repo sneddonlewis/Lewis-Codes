@@ -80,7 +80,7 @@ function Skills() {
 				</li>
 			</ul>
 
-			<p className="subheading mb-3">See my <a target="_blank" rel="noreferrer" href="https://stackoverflow.com/users/story/12854901">Stackoverflow page</a> for Pluralsight Skill IQ scores</p>
+			<p className="subheading mb-3">See my <a target="_blank" rel="noreferrer" href="https://app.pluralsight.com/profile/lewis-sneddon">Pluralsight</a>  Skill IQ scores</p>
 
 		</div>
 	);
