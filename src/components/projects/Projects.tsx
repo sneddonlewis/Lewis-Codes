@@ -97,28 +97,12 @@ function Projects() {
 }
 
 const webProjects = [
-	// {
-	// 	title: "Code Bank",
-	// 	description: "A Full Stack web app where users can share code snippets to common algorithm problems",
-	// 	codeUrl: "https://github.com/codeslewis/code-bank",
-	// 	launchable: false,
-	// 	launchUrl: "",
-	// 	techStack: ["java", "spring", "react", "postgresql"],
-	// },
-	// {
-	// 	title: "Web Quiz App",
-	// 	description: "Backed of a Spring Web App to create and solve quizzes.",
-	// 	codeUrl: "https://github.com/codeslewis/CodeShare",
-	// 	launchable: false,
-	// 	launchUrl: "",
-	// 	techStack: ["java", "spring"],
-	// },
 	{
 		title: "Cinema Booking API",
 		description: "A RESTful web API that handles the booking and returning of theatre seats.",
-		codeUrl: "https://github.com/codeslewis/Baking_Conversions",
+		codeUrl: "https://github.com/codeslewis/Cinema_Room_REST_Service/tree/master/Cinema%20Room%20REST%20Service/task",
 		launchable: false,
-		launchUrl: "https://github.com/codeslewis/Cinema_Room_REST_Service/tree/master/Cinema%20Room%20REST%20Service/task",
+		launchUrl: "",
 		techStack: ["java", "spring"],
 	},
 	{
