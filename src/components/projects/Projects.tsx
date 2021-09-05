@@ -114,6 +114,14 @@ const webProjects = [
 	// 	techStack: ["java", "spring"],
 	// },
 	{
+		title: "Cinema Booking API",
+		description: "A RESTful web API that handles the booking and returning of theatre seats.",
+		codeUrl: "https://github.com/codeslewis/Baking_Conversions",
+		launchable: false,
+		launchUrl: "https://github.com/codeslewis/Cinema_Room_REST_Service/tree/master/Cinema%20Room%20REST%20Service/task",
+		techStack: ["java", "spring"],
+	},
+	{
 		title: "Bake Buddy",
 		description: "A conversion app for common baking ingredients.",
 		codeUrl: "https://github.com/codeslewis/Baking_Conversions",
