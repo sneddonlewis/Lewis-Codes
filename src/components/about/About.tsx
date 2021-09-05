@@ -28,6 +28,7 @@ function About() {
 				<p>User Interface programming for desktop, web and mobile</p>
 				<p>Interacting with structured and semi-structured data</p>
 				<p>Scripting, version control and cloud</p>
+				<p className="subheading mb-3"><a target="_blank" rel="noreferrer" href="https://app.pluralsight.com/profile/lewis-sneddon">Verified skills</a></p>
 			</div>
 		</div>
 	);
