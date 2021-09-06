@@ -100,7 +100,7 @@ const webProjects = [
 	{
 		title: "Cinema Booking API",
 		description: "A RESTful web API that handles the booking and returning of theatre seats.",
-		codeUrl: "https://github.com/codeslewis/Cinema_Room_REST_Service/tree/master/Cinema%20Room%20REST%20Service/task",
+		codeUrl: "https://github.com/codeslewis/Cinema_API",
 		launchable: false,
 		launchUrl: "",
 		techStack: ["java", "spring"],
