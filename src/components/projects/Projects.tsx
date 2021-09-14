@@ -104,8 +104,8 @@ const webProjects = [
 		title: "Code Share",
 		description: "A web app for storage and retrieval of code snippets. Includes a REST API and Freemarker web view",
 		codeUrl: "https://github.com/codeslewis/code-share",
-		launchable: false,
-		launchUrl: "",
+		launchable: true,
+		launchUrl: "https://youtu.be/XGXJ-Cekepg",
 		techStack: ["java", "spring"],
 	},
 	{
