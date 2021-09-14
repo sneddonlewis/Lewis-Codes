@@ -98,6 +98,14 @@ function Projects() {
 
 const webProjects = [
 	{
+		title: "Code Share",
+		description: "A web app for storage and retrieval of code snippets. Includes a REST API and Freemarker web view",
+		codeUrl: "https://github.com/codeslewis/code-share",
+		launchable: false,
+		launchUrl: "",
+		techStack: ["java", "spring"],
+	},
+	{
 		title: "Cinema Booking API",
 		description: "A RESTful web API that handles the booking and returning of theatre seats.",
 		codeUrl: "https://github.com/codeslewis/Cinema_API",
