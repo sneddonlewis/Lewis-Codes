@@ -14,22 +14,25 @@ function Projects() {
 		<div className="mb-5">
 			<h1 className="alert alert-primary">Projects</h1>
 			<Nav tabs className="nav-fill">
+
 				<NavItem>
 					<NavLink
 						className={classnames({ active: activeTab === '1' })}
 						onClick={() => { toggle('1'); }}
 					>
-						Desktop
+						Web
 					</NavLink>
 				</NavItem>
+
 				<NavItem>
 					<NavLink
 						className={classnames({ active: activeTab === '2' })}
 						onClick={() => { toggle('2'); }}
 					>
-						Web
+						Desktop
 					</NavLink>
 				</NavItem>
+
 				<NavItem>
 					<NavLink
 						className={classnames({ active: activeTab === '3' })}
@@ -42,7 +45,7 @@ function Projects() {
 			<TabContent activeTab={activeTab}>
 				<TabPane tabId="1">
 					<div className="row align-content-center">
-						{desktopProjects.map((i) => {
+						{webProjects.map((i) => {
 							return (
 								<Project
 									title={i.title}
@@ -59,7 +62,7 @@ function Projects() {
 				</TabPane>
 				<TabPane tabId="2">
 					<div className="row">
-						{webProjects.map((i) => {
+						{desktopProjects.map((i) => {
 							return (
 								<Project
 									title={i.title}
