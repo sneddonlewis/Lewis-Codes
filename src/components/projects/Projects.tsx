@@ -105,7 +105,7 @@ const webProjects = [
 		description: "A web app for storage and retrieval of code snippets. Includes a REST API and React web view",
 		codeUrl: "https://github.com/codeslewis/Code_Share_React",
 		launchable: true,
-		launchUrl: "https://youtu.be/XGXJ-Cekepg",
+		launchUrl: "https://youtu.be/w5HjaCc_RfE",
 		techStack: ["java", "spring", "react"],
 	},
 	{
