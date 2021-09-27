@@ -15,21 +15,21 @@ interface Proj {
 
 function Projects() {
 	const [activeTab, setActiveTab] = useState('1');
-	const [mobProj, setMobProj] = useState<Proj[]>([]);
-
-	const API_URL = 'http://lewiscodesapi-env.eba-ufjsyfvc.eu-west-2.elasticbeanstalk.com/api/projects/mobile';
+	// const [mobProj, setMobProj] = useState<Proj[]>([]);
+	//
+	// const API_URL = 'http://lewiscodesapi-env.eba-ufjsyfvc.eu-west-2.elasticbeanstalk.com/api/projects/mobile';
 	// const API_LOCAL = 'http://localhost:8080'
-
-	useEffect(() => {
-		loadMobProj();
-	}, []);
-
-
-	const loadMobProj = async () => {
-		const response = await fetch(API_URL);
-		const data: Proj[] = await response.json();
-		setMobProj(data);
-	}
+	//
+	// useEffect(() => {
+	// 	loadMobProj();
+	// }, []);
+	//
+	//
+	// const loadMobProj = async () => {
+	// 	const response = await fetch(API_URL);
+	// 	const data: Proj[] = await response.json();
+	// 	setMobProj(data);
+	// }
 
 	const toggle = (tab: string) => {
 		if(activeTab !== tab) setActiveTab(tab);
@@ -118,7 +118,7 @@ function Projects() {
 					{/*	})}*/}
 					{/*</div>*/}
 					<div className="row">
-						{mobProj.map((i) => {
+						{mobileProjects.map((i) => {
 							return (
 								<Project
 									title={i.title}
@@ -174,17 +174,17 @@ const webProjects = [
 	}
 ];
 
-// const mobileProjects = [
-// 	{
-// 		title: "Bake Buddy (Android)",
-// 		description: `A baking ingredient conversion app. This Android app converts Imperial and US Legal baking ingredient measurements into the metric system.`,
-// 		codeUrl:
-// 			"https://github.com/codeslewis/Bake_Buddy_Android/tree/master/app/src",
-// 		launchable: false,
-// 		launchUrl: null,
-// 		techStack: ["android", "java"],
-// 	},
-// ];
+const mobileProjects = [
+	{
+		title: "Bake Buddy (Android)",
+		description: `A baking ingredient conversion app. This Android app converts Imperial and US Legal baking ingredient measurements into the metric system.`,
+		codeUrl:
+			"https://github.com/codeslewis/Bake_Buddy_Android/tree/master/app/src",
+		launchable: false,
+		launchUrl: null,
+		techStack: ["android", "java"],
+	},
+];
 
 const desktopProjects = [
 	{
