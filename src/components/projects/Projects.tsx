@@ -17,7 +17,7 @@ function Projects() {
 	const [activeTab, setActiveTab] = useState('1');
 	const [mobProj, setMobProj] = useState<Proj[]>([]);
 
-	const API_URL = 'http://lewiscodesapi-env.eba-ufjsyfvc.eu-west-2.elasticbeanstalk.com';
+	const API_URL = 'https://lewiscodesapi-env.eba-ufjsyfvc.eu-west-2.elasticbeanstalk.com';
 	// const API_LOCAL = 'http://localhost:8080'
 
 	useEffect(() => {
