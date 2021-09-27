@@ -17,7 +17,7 @@ function Projects() {
 	const [activeTab, setActiveTab] = useState('1');
 	const [mobProj, setMobProj] = useState<Proj[]>([]);
 
-	const API_URL = 'https://lewiscodesapi-env.eba-ufjsyfvc.eu-west-2.elasticbeanstalk.com';
+	const API_URL = 'https://lewiscodesapi-env.eba-ufjsyfvc.eu-west-2.elasticbeanstalk.com/api/projects/mobile';
 	// const API_LOCAL = 'http://localhost:8080'
 
 	useEffect(() => {
@@ -26,7 +26,7 @@ function Projects() {
 
 
 	const loadMobProj = async () => {
-		const response = await fetch(API_URL + "/api/projects/mobile");
+		const response = await fetch(API_URL);
 		const data: Proj[] = await response.json();
 		setMobProj(data);
 	}
