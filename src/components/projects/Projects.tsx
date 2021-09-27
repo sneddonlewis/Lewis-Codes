@@ -1,11 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Nav, NavItem, NavLink, TabContent, TabPane } from "reactstrap";
 import classnames from 'classnames';
 import Project from "./Project";
 
+interface Proj {
+	title: string;
+	techStack: string[];
+	description: string;
+	launchable: boolean;
+	launchUrl?: string;
+	codeUrl: string;
+}
+
 function Projects() {
 	const [activeTab, setActiveTab] = useState('1');
+	const [mobProj, setMobProj] = useState<Proj[]>([]);
+
+	const API_URL = 'http://lewiscodesapi-env.eba-ufjsyfvc.eu-west-2.elasticbeanstalk.com';
+	// const API_LOCAL = 'http://localhost:8080'
+
+	useEffect(() => {
+		loadMobProj();
+	}, []);
+
+
+	const loadMobProj = async () => {
+		const response = await fetch(API_URL + "/api/projects/mobile");
+		const data: Proj[] = await response.json();
+		setMobProj(data);
+	}
 
 	const toggle = (tab: string) => {
 		if(activeTab !== tab) setActiveTab(tab);
@@ -78,8 +102,23 @@ function Projects() {
 					</div>
 				</TabPane>
 				<TabPane tabId="3">
+					{/*<div className="row">*/}
+					{/*	{mobileProjects.map((i) => {*/}
+					{/*		return (*/}
+					{/*			<Project*/}
+					{/*				title={i.title}*/}
+					{/*				description={i.description}*/}
+					{/*				codeUrl={i.codeUrl}*/}
+					{/*				launchUrl={i.launchUrl || ""}*/}
+					{/*				techStack={i.techStack}*/}
+					{/*				launchable={i.launchable}*/}
+					{/*				key={i.title}*/}
+					{/*			/>*/}
+					{/*		);*/}
+					{/*	})}*/}
+					{/*</div>*/}
 					<div className="row">
-						{mobileProjects.map((i) => {
+						{mobProj.map((i) => {
 							return (
 								<Project
 									title={i.title}
@@ -98,6 +137,7 @@ function Projects() {
 		</div>
 	);
 }
+
 
 const webProjects = [
 	{
@@ -134,17 +174,17 @@ const webProjects = [
 	}
 ];
 
-const mobileProjects = [
-	{
-		title: "Bake Buddy (Android)",
-		description: `A baking ingredient conversion app. This Android app converts Imperial and US Legal baking ingredient measurements into the metric system.`,
-		codeUrl:
-			"https://github.com/codeslewis/Bake_Buddy_Android/tree/master/app/src",
-		launchable: false,
-		launchUrl: null,
-		techStack: ["android", "java"],
-	},
-];
+// const mobileProjects = [
+// 	{
+// 		title: "Bake Buddy (Android)",
+// 		description: `A baking ingredient conversion app. This Android app converts Imperial and US Legal baking ingredient measurements into the metric system.`,
+// 		codeUrl:
+// 			"https://github.com/codeslewis/Bake_Buddy_Android/tree/master/app/src",
+// 		launchable: false,
+// 		launchUrl: null,
+// 		techStack: ["android", "java"],
+// 	},
+// ];
 
 const desktopProjects = [
 	{
