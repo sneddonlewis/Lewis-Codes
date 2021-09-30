@@ -149,6 +149,14 @@ const webProjects = [
 		techStack: ["java", "spring", "react"],
 	},
 	{
+		title: "Recipe Service",
+		description: "Spring REST api for storage and retrieval of recipes. Recipes are uploaded and modified by authenticated users yet searchable publicly",
+		codeUrl: "https://github.com/codeslewis/Recipe_Service/tree/master/Recipes/task",
+		launchable: false,
+		launchUrl: "",
+		techStack: ["java", "spring"],
+	},
+	{
 		title: "Cinema Booking API",
 		description: "A RESTful web API that handles the booking and returning of theatre seats.",
 		codeUrl: "https://github.com/codeslewis/Cinema_API",
