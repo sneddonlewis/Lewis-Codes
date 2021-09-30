@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import { Nav, NavItem, NavLink, TabContent, TabPane } from "reactstrap";
 import classnames from 'classnames';
 import Project from "./Project";
 
-interface Proj {
-	title: string;
-	techStack: string[];
-	description: string;
-	launchable: boolean;
-	launchUrl?: string;
-	codeUrl: string;
-}
+// interface Proj {
+// 	title: string;
+// 	techStack: string[];
+// 	description: string;
+// 	launchable: boolean;
+// 	launchUrl?: string;
+// 	codeUrl: string;
+// }
 
 function Projects() {
 	const [activeTab, setActiveTab] = useState('1');
