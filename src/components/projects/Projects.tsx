@@ -205,6 +205,15 @@ const desktopProjects = [
 		techStack: ["java"],
 	},
 	{
+		title: "Banking System",
+		description: "Using the JDBC API, this project: persists user bank accounts and handles transfers between accounts in a transactional manner.",
+		codeUrl:
+			"https://github.com/codeslewis/Banking_System/tree/master/Simple%20Banking%20System/task/src/banking",
+		launchable: false,
+		launchUrl: null,
+		techStack: ["java"],
+	},
+	{
 		title: "Text Encryption",
 		description: "Encrypt and Decrypt text via files or command line arguments using a shift or a unicode encryption algorithm",
 		codeUrl:
