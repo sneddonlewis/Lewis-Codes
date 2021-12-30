@@ -179,6 +179,14 @@ const webProjects = [
 		launchable: false,
 		launchUrl: "",
 		techStack: ["react", "ts", "node"],
+	},
+	{
+		title: "AngularJS Starter Template",
+		description: "This repository is provisioned as a template with the intention of assisting a developer in getting setup quickly with AngularJS development. It's intention is to assist developers who are required to work with legacy technologies. The AngularJS app is served as static content from a NodeJS web server.",
+		codeUrl: "https://github.com/codeslewis/AngularJS_Template",
+		launchable: false,
+		launchUrl: "",
+		techStack: ["angular", "js", "node"],
 	}
 ];
 
