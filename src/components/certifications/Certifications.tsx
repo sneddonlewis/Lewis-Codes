@@ -1,7 +1,7 @@
 import React from "react";
 
 import './Certifications.css';
-import {Card, CardImg, CardTitle, Container} from "reactstrap";
+import {Container} from "reactstrap";
 
 const Certifications = () => {
 	return (
