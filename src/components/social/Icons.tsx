@@ -1,6 +1,6 @@
 import React from "react";
 import "./Icons.css";
-import {FaGithub, FaLinkedin, FaStackOverflow} from "react-icons/fa";
+import {FaGithub, FaLinkedin} from "react-icons/fa";
 
 
 const Icons = () => {
@@ -26,17 +26,6 @@ const Icons = () => {
 				<div className="tooltip">LinkedIn</div>
 				<span>
         		<FaLinkedin />
-      		</span>
-			</a>
-			<a
-				className="icon stack-overflow"
-				href="https://stackoverflow.com/users/story/12854901"
-				target="_blank"
-				rel="noreferrer"
-			>
-				<div className="tooltip">Stack Overflow</div>
-				<span>
-        		<FaStackOverflow />
       		</span>
 			</a>
 		</div>
