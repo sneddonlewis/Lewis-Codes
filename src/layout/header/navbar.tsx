@@ -11,7 +11,7 @@ function NavBar() {
 	}
 	return (
 		<nav className="navbar bg-dark navbar-dark navbar-expand-lg" id="sideNav">
-			<a className="navbar-brand p-3 mr-auto" href="/">
+			<a className="navbar-brand ps-5 mr-auto" href="/">
         		Lewis Codes
 			</a>
 			<button

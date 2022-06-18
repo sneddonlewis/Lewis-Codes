@@ -12,7 +12,7 @@ function About() {
 	}
 	return (
 		<div className="m-5">
-			<h1>Lewis Sneddon</h1>
+			<div className="h1">Lewis Sneddon</div>
 			<div className="subheading mb-5">
 				Software Developer ·
 				<Button
