@@ -26,6 +26,7 @@ function Projects() {
 				<NavItem>
 					<NavLink
 						className={classnames({ active: activeTab === '1' })}
+						style={{cursor: "pointer"}}
 						onClick={() => { toggle('1'); }}
 					>
 						Full Stack
@@ -35,6 +36,7 @@ function Projects() {
 				<NavItem>
 					<NavLink
 						className={classnames({ active: activeTab === '2' })}
+						style={{cursor: "pointer"}}
 						onClick={() => { toggle('2'); }}
 					>
 						Web API
@@ -44,6 +46,7 @@ function Projects() {
 				<NavItem>
 					<NavLink
 						className={classnames({ active: activeTab === '3' })}
+						style={{cursor: "pointer"}}
 						onClick={() => { toggle('3'); }}
 					>
 						Frontend
@@ -53,6 +56,7 @@ function Projects() {
 				<NavItem>
 					<NavLink
 						className={classnames({ active: activeTab === '4' })}
+						style={{cursor: "pointer"}}
 						onClick={() => { toggle('4'); }}
 					>
 						Desktop
@@ -62,6 +66,7 @@ function Projects() {
 				<NavItem>
 					<NavLink
 						className={classnames({ active: activeTab === '5' })}
+						style={{cursor: "pointer"}}
 						onClick={() => { toggle('5'); }}
 					>
 						Mobile
