@@ -1,8 +1,9 @@
 import logos from "../../common/techLogos";
+import {Container} from "reactstrap";
 
 function Skills() {
 	return (
-		<div>
+		<Container>
 			<h1 className="alert alert-primary">Skills</h1>
 			<h3 className="m-5">Technologies</h3>
 			<ul className="list-inline m-5">
@@ -62,7 +63,7 @@ function Skills() {
 
 			<p className="subheading mb-3">See my <a target="_blank" rel="noreferrer" href="https://app.pluralsight.com/profile/lewis-sneddon">Pluralsight</a>  Skill IQ scores</p>
 
-		</div>
+		</Container>
 	);
 }
 

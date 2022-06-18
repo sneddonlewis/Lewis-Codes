@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Nav, NavItem, NavLink, TabContent, TabPane } from "reactstrap";
+import { Nav, NavItem, NavLink, TabContent, TabPane, Container } from "reactstrap";
 import classnames from 'classnames';
 import Project from "./Project";
 
@@ -19,7 +19,7 @@ function Projects() {
 		if(activeTab !== tab) setActiveTab(tab);
 	}
 	return (
-		<div className="mb-5">
+		<Container>
 			<h1 className="alert alert-primary">Projects</h1>
 			<Nav tabs className="nav-fill">
 
@@ -167,7 +167,7 @@ function Projects() {
 				</TabPane>
 
 			</TabContent>
-		</div>
+		</Container>
 	);
 }
 
