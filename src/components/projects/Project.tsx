@@ -2,9 +2,9 @@ import { FaGithub, FaRocket } from 'react-icons/fa';
 import {Button} from "reactstrap";
 import logos from "../../common/techLogos";
 
-import IProjectProps from "../../Typings/IProjectProps";
+import IProject from "../../Typings/IProjectProps";
 
-function Project(props: IProjectProps) {
+function Project(props: IProject) {
 	const {title, techStack, description, launchable, launchUrl, codeUrl} = props
 	return (
 		<div className="col-sm-3 m-auto mt-4" style={{ width: "20rem" }}>

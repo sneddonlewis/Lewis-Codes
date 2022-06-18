@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 
-import { Nav, NavItem, NavLink, TabContent, TabPane, Container } from "reactstrap";
+import {Nav, NavItem, NavLink, Container, TabContent} from "reactstrap";
 import classnames from 'classnames';
-import Project from "./Project";
 
 import {
 	mobileProjects,
@@ -11,6 +10,7 @@ import {
 	webApiProjects,
 	frontendProjects
 } from "../../data/ProjectsData";
+import ProjectTabContents from "./ProjectTabContents";
 
 function Projects() {
 	const [activeTab, setActiveTab] = useState('1');
@@ -75,97 +75,11 @@ function Projects() {
 			</Nav>
 
 			<TabContent activeTab={activeTab}>
-
-				<TabPane tabId="1">
-					<div className="row align-content-center">
-						{fullStackProjects.map((i) => {
-							return (
-								<Project
-									title={i.title}
-									description={i.description}
-									codeUrl={i.codeUrl}
-									launchUrl={i.launchUrl || ""}
-									techStack={i.techStack}
-									launchable={i.launchable}
-									key={i.title}
-								/>
-							);
-						})}
-					</div>
-				</TabPane>
-
-				<TabPane tabId="2">
-					<div className="row">
-						{webApiProjects.map((i) => {
-							return (
-								<Project
-									title={i.title}
-									description={i.description}
-									codeUrl={i.codeUrl}
-									launchUrl={i.launchUrl || ""}
-									techStack={i.techStack}
-									launchable={i.launchable}
-									key={i.title}
-								/>
-							);
-						})}
-					</div>
-				</TabPane>
-
-				<TabPane tabId="3">
-					<div className="row">
-						{frontendProjects.map((i) => {
-							return (
-								<Project
-									title={i.title}
-									description={i.description}
-									codeUrl={i.codeUrl}
-									launchUrl={i.launchUrl || ""}
-									techStack={i.techStack}
-									launchable={i.launchable}
-									key={i.title}
-								/>
-							);
-						})}
-					</div>
-				</TabPane>
-
-				<TabPane tabId="4">
-					<div className="row">
-						{desktopProjects.map((i) => {
-							return (
-								<Project
-									title={i.title}
-									description={i.description}
-									codeUrl={i.codeUrl}
-									launchUrl={i.launchUrl || ""}
-									techStack={i.techStack}
-									launchable={i.launchable}
-									key={i.title}
-								/>
-							);
-						})}
-					</div>
-				</TabPane>
-
-				<TabPane tabId="5">
-					<div className="row">
-						{mobileProjects.map((i) => {
-							return (
-								<Project
-									title={i.title}
-									description={i.description}
-									codeUrl={i.codeUrl}
-									launchUrl={i.launchUrl || ""}
-									techStack={i.techStack}
-									launchable={i.launchable}
-									key={i.title}
-								/>
-							);
-						})}
-					</div>
-				</TabPane>
-
+				<ProjectTabContents projects={fullStackProjects} tabId={"1"} />
+				<ProjectTabContents projects={webApiProjects} tabId={"2"} />
+				<ProjectTabContents projects={frontendProjects} tabId={"3"} />
+				<ProjectTabContents projects={desktopProjects} tabId={"4"} />
+				<ProjectTabContents projects={mobileProjects} tabId={"5"} />
 			</TabContent>
 		</Container>
 	);
