@@ -4,7 +4,13 @@ import { Nav, NavItem, NavLink, TabContent, TabPane } from "reactstrap";
 import classnames from 'classnames';
 import Project from "./Project";
 
-import { webProjects, mobileProjects, desktopProjects } from "../../data/ProjectsData";
+import {
+	mobileProjects,
+	desktopProjects,
+	fullStackProjects,
+	webApiProjects,
+	frontendProjects
+} from "../../data/ProjectsData";
 
 function Projects() {
 	const [activeTab, setActiveTab] = useState('1');
@@ -22,7 +28,7 @@ function Projects() {
 						className={classnames({ active: activeTab === '1' })}
 						onClick={() => { toggle('1'); }}
 					>
-						Web
+						Full Stack
 					</NavLink>
 				</NavItem>
 
@@ -31,7 +37,7 @@ function Projects() {
 						className={classnames({ active: activeTab === '2' })}
 						onClick={() => { toggle('2'); }}
 					>
-						Desktop
+						Web API
 					</NavLink>
 				</NavItem>
 
@@ -40,14 +46,34 @@ function Projects() {
 						className={classnames({ active: activeTab === '3' })}
 						onClick={() => { toggle('3'); }}
 					>
+						Frontend
+					</NavLink>
+				</NavItem>
+
+				<NavItem>
+					<NavLink
+						className={classnames({ active: activeTab === '4' })}
+						onClick={() => { toggle('4'); }}
+					>
+						Desktop
+					</NavLink>
+				</NavItem>
+
+				<NavItem>
+					<NavLink
+						className={classnames({ active: activeTab === '5' })}
+						onClick={() => { toggle('5'); }}
+					>
 						Mobile
 					</NavLink>
 				</NavItem>
 			</Nav>
+
 			<TabContent activeTab={activeTab}>
+
 				<TabPane tabId="1">
 					<div className="row align-content-center">
-						{webProjects.map((i) => {
+						{fullStackProjects.map((i) => {
 							return (
 								<Project
 									title={i.title}
@@ -62,7 +88,44 @@ function Projects() {
 						})}
 					</div>
 				</TabPane>
+
 				<TabPane tabId="2">
+					<div className="row">
+						{webApiProjects.map((i) => {
+							return (
+								<Project
+									title={i.title}
+									description={i.description}
+									codeUrl={i.codeUrl}
+									launchUrl={i.launchUrl || ""}
+									techStack={i.techStack}
+									launchable={i.launchable}
+									key={i.title}
+								/>
+							);
+						})}
+					</div>
+				</TabPane>
+
+				<TabPane tabId="3">
+					<div className="row">
+						{frontendProjects.map((i) => {
+							return (
+								<Project
+									title={i.title}
+									description={i.description}
+									codeUrl={i.codeUrl}
+									launchUrl={i.launchUrl || ""}
+									techStack={i.techStack}
+									launchable={i.launchable}
+									key={i.title}
+								/>
+							);
+						})}
+					</div>
+				</TabPane>
+
+				<TabPane tabId="4">
 					<div className="row">
 						{desktopProjects.map((i) => {
 							return (
@@ -79,7 +142,8 @@ function Projects() {
 						})}
 					</div>
 				</TabPane>
-				<TabPane tabId="3">
+
+				<TabPane tabId="5">
 					<div className="row">
 						{mobileProjects.map((i) => {
 							return (
@@ -96,6 +160,7 @@ function Projects() {
 						})}
 					</div>
 				</TabPane>
+
 			</TabContent>
 		</div>
 	);

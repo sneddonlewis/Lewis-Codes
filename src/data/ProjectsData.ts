@@ -1,6 +1,6 @@
 import { IProject } from "../Typings/IProject";
 
-const webProjects: IProject[] = [
+const fullStackProjects: IProject[] = [
 	{
 		title: "Code Share",
 		description: "A web app for storage and retrieval of code snippets. Includes a REST API and React web view",
@@ -9,14 +9,9 @@ const webProjects: IProject[] = [
 		launchUrl: "https://youtu.be/EY8chA5bSfc",
 		techStack: ["java", "spring", "react"],
 	},
-	{
-		title: "Recipe Service",
-		description: "Spring REST api for storage and retrieval of recipes. Recipes are uploaded and modified by authenticated users yet searchable publicly",
-		codeUrl: "https://github.com/codeslewis/Recipe_Service/tree/master/Recipes/task",
-		launchable: false,
-		launchUrl: "",
-		techStack: ["java", "spring"],
-	},
+];
+
+const webApiProjects: IProject[] = [
 	{
 		title: "Cinema Booking API",
 		description: "A RESTful web API that handles the booking and returning of theatre seats.",
@@ -25,14 +20,9 @@ const webProjects: IProject[] = [
 		launchUrl: "",
 		techStack: ["java", "spring"],
 	},
-	{
-		title: "Bake Buddy",
-		description: "A conversion app for common baking ingredients.",
-		codeUrl: "https://github.com/codeslewis/Baking_Conversions",
-		launchable: true,
-		launchUrl: "https://bake-buddy.netlify.app/",
-		techStack: ["react", "js"],
-	},
+];
+
+const frontendProjects: IProject[] = [
 	{
 		title: "Lewis Codes",
 		description: "This site. A React SPA",
@@ -40,6 +30,14 @@ const webProjects: IProject[] = [
 		launchable: false,
 		launchUrl: "",
 		techStack: ["react", "ts", "node"],
+	},
+	{
+		title: "Bake Buddy",
+		description: "A conversion app for common baking ingredients.",
+		codeUrl: "https://github.com/codeslewis/Baking_Conversions",
+		launchable: true,
+		launchUrl: "https://bake-buddy.netlify.app/",
+		techStack: ["react", "js"],
 	},
 	{
 		title: "AngularJS Starter Template",
@@ -65,37 +63,10 @@ const mobileProjects: IProject[] = [
 
 const desktopProjects: IProject[] = [
 	{
-		title: "JSON Database",
-		description: "A multithreaded document database that stores data in a json file. Includes a command line client",
-		codeUrl:
-			"https://github.com/codeslewis/Json_Database/tree/master/JSON%20Database/task/src",
-		launchable: false,
-		launchUrl: "",
-		techStack: ["java"],
-	},
-	{
-		title: "Banking System",
-		description: "Using the JDBC API, this project: persists user bank accounts and handles transfers between accounts in a transactional manner.",
-		codeUrl:
-			"https://github.com/codeslewis/Banking_System/tree/master/Simple%20Banking%20System/task/src/banking",
-		launchable: false,
-		launchUrl: "",
-		techStack: ["java"],
-	},
-	{
 		title: "Text Encryption",
 		description: "Encrypt and Decrypt text via files or command line arguments using a shift or a unicode encryption algorithm",
 		codeUrl:
 			"https://github.com/codeslewis/encryptor",
-		launchable: false,
-		launchUrl: "",
-		techStack: ["java"],
-	},
-	{
-		title: "Matrix Calculator",
-		description: "Performs math operations on numeric matrices",
-		codeUrl:
-			"https://github.com/codeslewis/Matrix_Calculator",
 		launchable: false,
 		launchUrl: "",
 		techStack: ["java"],
@@ -130,7 +101,9 @@ const desktopProjects: IProject[] = [
 ];
 
 export {
-    webProjects,
-    mobileProjects,
-    desktopProjects
+	fullStackProjects,
+	webApiProjects,
+	frontendProjects,
+	mobileProjects,
+	desktopProjects
 };
