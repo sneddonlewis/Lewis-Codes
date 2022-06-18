@@ -29,7 +29,7 @@ function Projects() {
 						style={{cursor: "pointer"}}
 						onClick={() => { toggle('1'); }}
 					>
-						Full Stack
+						Full Stack <span className="badge rounded-pill bg-success ms-3">{fullStackProjects.length}</span>
 					</NavLink>
 				</NavItem>
 
@@ -39,7 +39,7 @@ function Projects() {
 						style={{cursor: "pointer"}}
 						onClick={() => { toggle('2'); }}
 					>
-						Web API
+						Web API <span className="badge rounded-pill bg-success ms-3">{webApiProjects.length}</span>
 					</NavLink>
 				</NavItem>
 
@@ -49,7 +49,7 @@ function Projects() {
 						style={{cursor: "pointer"}}
 						onClick={() => { toggle('3'); }}
 					>
-						Frontend
+						Frontend <span className="badge rounded-pill bg-success ms-3">{frontendProjects.length}</span>
 					</NavLink>
 				</NavItem>
 
@@ -59,7 +59,7 @@ function Projects() {
 						style={{cursor: "pointer"}}
 						onClick={() => { toggle('4'); }}
 					>
-						Desktop
+						Desktop <span className="badge rounded-pill bg-success ms-3">{desktopProjects.length}</span>
 					</NavLink>
 				</NavItem>
 
@@ -69,7 +69,7 @@ function Projects() {
 						style={{cursor: "pointer"}}
 						onClick={() => { toggle('5'); }}
 					>
-						Mobile
+						Mobile <span className="badge rounded-pill bg-success ms-3">{mobileProjects.length}</span>
 					</NavLink>
 				</NavItem>
 			</Nav>
