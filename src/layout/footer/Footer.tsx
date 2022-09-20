@@ -7,7 +7,6 @@ function Footer() {
                 <div className="row gy-4 gx-5">
                     <div className="text-center">
                         <p className="small text-muted">Portfolio site for Lewis Sneddon</p>
-                        <p className="text-muted">lewiscodes.io</p>
                     </div>
                 </div>
             </div>

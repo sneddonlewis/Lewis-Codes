@@ -8,7 +8,7 @@ const Icons = () => {
 		<div className="wrapper">
 			<a
 				className="icon github"
-				href="https://github.com/codeslewis"
+				href="https://github.com/sneddonlewis"
 				target="_blank"
 				rel="noreferrer"
 			>

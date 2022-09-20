@@ -38,11 +38,6 @@ function NavBar() {
 						</NavLink>
 					</NavItem>
 					<NavItem>
-						<NavLink href="/skills">
-							Skills
-						</NavLink>
-					</NavItem>
-					<NavItem>
 						<NavLink onClick={toggleModal} href="#">
 							Contact
 						</NavLink>

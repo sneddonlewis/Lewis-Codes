@@ -47,6 +47,9 @@ function Project(props: IProject) {
 								case "postgresql":
 									image = <img src={logos["postgresql"]} alt="PostgreSQL logo" />;
 									break;
+								case "aws":
+									image = <img src={logos["aws"]} alt="Amazon Web Services logo" />;
+									break;
 								default:
 									image = null;
 							}
