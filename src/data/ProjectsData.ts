@@ -29,7 +29,7 @@ const frontendProjects: IProject[] = [
 		codeUrl: "https://github.com/codeslewis/Lewis-Codes",
 		launchable: false,
 		launchUrl: "",
-		techStack: ["react", "ts", "node"],
+		techStack: ["react", "ts", "aws"],
 	},
 	{
 		title: "Bake Buddy",
