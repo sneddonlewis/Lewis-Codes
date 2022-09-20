@@ -1,5 +1,5 @@
 import logos from "../../common/techLogos";
-import {Container} from "reactstrap";
+import {Container, Button} from "reactstrap";
 
 function Skills() {
 	return (
@@ -61,7 +61,20 @@ function Skills() {
 				</li>
 			</ul>
 
-			<p className="subheading mb-3">See my <a target="_blank" rel="noreferrer" href="https://app.pluralsight.com/profile/lewis-sneddon">Pluralsight</a>  Skill IQ scores</p>
+				<a target="_blank" rel="noreferrer" href="https://app.pluralsight.com/profile/lewis-sneddon">
+				<Button
+					className="ms-1"
+					outline
+					color="dark"
+					size="sm"
+				>Verified skills from Pluralsight</Button></a>
+				<a target="_blank" rel="noreferrer" href="https://frontendmasters.com/u/lsneddon/">
+				<Button
+					className="ms-1"
+					outline
+					color="dark"
+					size="sm"
+				>Learning record from Frontend Masters</Button></a>
 
 		</Container>
 	);

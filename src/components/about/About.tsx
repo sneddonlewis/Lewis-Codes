@@ -34,7 +34,14 @@ function About() {
 					outline
 					color="dark"
 					size="sm"
-				>Verified skills</Button></a>
+				>Verified skills from Pluralsight</Button></a>
+				<a target="_blank" rel="noreferrer" href="https://frontendmasters.com/u/lsneddon/">
+				<Button
+					className="ms-1"
+					outline
+					color="dark"
+					size="sm"
+				>Learning record from Frontend Masters</Button></a>
 			</div>
 		</div>
 	);
