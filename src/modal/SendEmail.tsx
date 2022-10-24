@@ -15,7 +15,7 @@ function SendEmail({showModal, toggleModal}: Props) {
                     <ModalContainer>
                         <div>
                             <div className="m-4">
-                                Send an email with your default Mail app to lewis@lewiscodes.io ?
+                                Send an email with your default Mail app to rustic.group0u@icloud.com ?
                             </div>
                             <div className="text-end">
                                 <Button
@@ -30,7 +30,7 @@ function SendEmail({showModal, toggleModal}: Props) {
                                     outline
                                     size="sm"
                                     color="primary"
-                                    href="mailto:lewis@lewiscodes.io"
+                                    href="mailto:rustic.group0u@icloud.com"
                                 >Ok</Button>
                             </div>
                         </div>

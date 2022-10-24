@@ -82,13 +82,13 @@ const desktopProjects: IProject[] = [
 		techStack: ["kotlin"],
 	},
 	{
-		title: "Battleships",
-		description: "A Battleship game for terminal.",
+		title: "Flashcards",
+		description: "CLI learning aid to test the user with flashcard type questions and answers that can be inputted interactively or loaded from a file",
 		codeUrl:
-			"https://github.com/sneddonlewis/Battleship/tree/master/Battleship/task/src/battleship",
+			"https://github.com/sneddonlewis/Flashcards_go/blob/master/Flashcards/task/main.go",
 		launchable: false,
 		launchUrl: "",
-		techStack: ["java"],
+		techStack: ["go"],
 	},
 ];
 
