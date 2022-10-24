@@ -59,7 +59,7 @@ function Projects() {
 						style={{cursor: "pointer"}}
 						onClick={() => { toggle('4'); }}
 					>
-						Desktop <span className="badge rounded-pill bg-success ms-3">{desktopProjects.length}</span>
+						CLI<span className="badge rounded-pill bg-success ms-3">{desktopProjects.length}</span>
 					</NavLink>
 				</NavItem>
 
