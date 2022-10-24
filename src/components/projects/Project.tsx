@@ -50,6 +50,9 @@ function Project(props: IProject) {
 								case "aws":
 									image = <img src={logos["aws"]} alt="Amazon Web Services logo" />;
 									break;
+								case "go":
+									image = <img src={logos["go"]} alt="Go logo" />;
+									break;
 								default:
 									image = null;
 							}
