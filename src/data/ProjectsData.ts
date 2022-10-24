@@ -64,6 +64,15 @@ const desktopProjects: IProject[] = [
 		techStack: ["java"],
 	},
 	{
+		title: "JSON Database",
+		description: "Multi-threaded database to store and retrieve JSON data. Includes a CLI client that can connect via TCP.",
+		codeUrl:
+			"https://github.com/sneddonlewis/Json_Database/tree/master/JSON%20Database/task/src",
+		launchable: false,
+		launchUrl: "",
+		techStack: ["java"],
+	},
+	{
 		title: "Noughts and Crosses",
 		description: `Java Desktop Noughts and Crosses game using the swing library for GUI`,
 		codeUrl:
