@@ -99,6 +99,15 @@ const desktopProjects: IProject[] = [
 		launchUrl: "",
 		techStack: ["go"],
 	},
+	{
+		title: "Notepad",
+		description: "An in memory CLI app providing basic CRUD functionality for notes",
+		codeUrl:
+			"https://github.com/sneddonlewis/notepad",
+		launchable: false,
+		launchUrl: "",
+		techStack: ["go"],
+	},
 ];
 
 export {
