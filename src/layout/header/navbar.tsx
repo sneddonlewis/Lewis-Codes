@@ -47,6 +47,6 @@ function NavBar() {
 			<SendEmail showModal={showModal} toggleModal={toggleModal}/>
 		</nav>
 	);
-};
+}
 
 export default NavBar;
