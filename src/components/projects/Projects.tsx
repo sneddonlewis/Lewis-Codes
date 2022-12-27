@@ -62,24 +62,13 @@ function Projects() {
 						Kotlin <span className="badge rounded-pill bg-success ms-3">{kotlinProjects.length}</span>
 					</NavLink>
 				</NavItem>
-
-				<NavItem>
-					<NavLink
-						className={classnames({ active: activeTab === '5' })}
-						style={{cursor: "pointer"}}
-						onClick={() => { toggle('5'); }}
-					>
-						Mobile <span className="badge rounded-pill bg-success ms-3">{mobileProjects.length}</span>
-					</NavLink>
-				</NavItem>
 			</Nav>
 
 			<TabContent activeTab={activeTab}>
 				<ProjectTabContents projects={javaProjects} tabId={"1"} />
-				<ProjectTabContents projects={webApiProjects} tabId={"2"} />
-				<ProjectTabContents projects={frontendProjects} tabId={"3"} />
-				<ProjectTabContents projects={desktopProjects} tabId={"4"} />
-				<ProjectTabContents projects={mobileProjects} tabId={"5"} />
+				<ProjectTabContents projects={goProjects} tabId={"2"} />
+				<ProjectTabContents projects={typeScriptProjects} tabId={"3"} />
+				<ProjectTabContents projects={kotlinProjects} tabId={"4"} />
 			</TabContent>
 		</Container>
 	);
