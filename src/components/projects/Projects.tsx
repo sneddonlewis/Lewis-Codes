@@ -8,7 +8,7 @@ import {
 	desktopProjects,
 	fullStackProjects,
 	webApiProjects,
-	frontendProjects, javaProjects
+	frontendProjects, javaProjects, goProjects, typeScriptProjects, kotlinProjects
 } from "../../data/ProjectsData";
 import ProjectTabContents from "./ProjectTabContents";
 
@@ -39,7 +39,7 @@ function Projects() {
 						style={{cursor: "pointer"}}
 						onClick={() => { toggle('2'); }}
 					>
-						Web API <span className="badge rounded-pill bg-success ms-3">{webApiProjects.length}</span>
+						Go <span className="badge rounded-pill bg-success ms-3">{goProjects.length}</span>
 					</NavLink>
 				</NavItem>
 
@@ -49,7 +49,7 @@ function Projects() {
 						style={{cursor: "pointer"}}
 						onClick={() => { toggle('3'); }}
 					>
-						Frontend <span className="badge rounded-pill bg-success ms-3">{frontendProjects.length}</span>
+						TypeScript <span className="badge rounded-pill bg-success ms-3">{typeScriptProjects.length}</span>
 					</NavLink>
 				</NavItem>
 
@@ -59,7 +59,7 @@ function Projects() {
 						style={{cursor: "pointer"}}
 						onClick={() => { toggle('4'); }}
 					>
-						CLI<span className="badge rounded-pill bg-success ms-3">{desktopProjects.length}</span>
+						Kotlin <span className="badge rounded-pill bg-success ms-3">{kotlinProjects.length}</span>
 					</NavLink>
 				</NavItem>
 
