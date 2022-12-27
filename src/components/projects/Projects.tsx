@@ -8,7 +8,7 @@ import {
 	desktopProjects,
 	fullStackProjects,
 	webApiProjects,
-	frontendProjects
+	frontendProjects, javaProjects, goProjects, typeScriptProjects, kotlinProjects
 } from "../../data/ProjectsData";
 import ProjectTabContents from "./ProjectTabContents";
 
@@ -29,7 +29,7 @@ function Projects() {
 						style={{cursor: "pointer"}}
 						onClick={() => { toggle('1'); }}
 					>
-						Full Stack <span className="badge rounded-pill bg-success ms-3">{fullStackProjects.length}</span>
+						Java <span className="badge rounded-pill bg-success ms-3">{javaProjects.length}</span>
 					</NavLink>
 				</NavItem>
 
@@ -39,7 +39,7 @@ function Projects() {
 						style={{cursor: "pointer"}}
 						onClick={() => { toggle('2'); }}
 					>
-						Web API <span className="badge rounded-pill bg-success ms-3">{webApiProjects.length}</span>
+						Go <span className="badge rounded-pill bg-success ms-3">{goProjects.length}</span>
 					</NavLink>
 				</NavItem>
 
@@ -49,7 +49,7 @@ function Projects() {
 						style={{cursor: "pointer"}}
 						onClick={() => { toggle('3'); }}
 					>
-						Frontend <span className="badge rounded-pill bg-success ms-3">{frontendProjects.length}</span>
+						TypeScript <span className="badge rounded-pill bg-success ms-3">{typeScriptProjects.length}</span>
 					</NavLink>
 				</NavItem>
 
@@ -59,27 +59,16 @@ function Projects() {
 						style={{cursor: "pointer"}}
 						onClick={() => { toggle('4'); }}
 					>
-						CLI<span className="badge rounded-pill bg-success ms-3">{desktopProjects.length}</span>
-					</NavLink>
-				</NavItem>
-
-				<NavItem>
-					<NavLink
-						className={classnames({ active: activeTab === '5' })}
-						style={{cursor: "pointer"}}
-						onClick={() => { toggle('5'); }}
-					>
-						Mobile <span className="badge rounded-pill bg-success ms-3">{mobileProjects.length}</span>
+						Kotlin <span className="badge rounded-pill bg-success ms-3">{kotlinProjects.length}</span>
 					</NavLink>
 				</NavItem>
 			</Nav>
 
 			<TabContent activeTab={activeTab}>
-				<ProjectTabContents projects={fullStackProjects} tabId={"1"} />
-				<ProjectTabContents projects={webApiProjects} tabId={"2"} />
-				<ProjectTabContents projects={frontendProjects} tabId={"3"} />
-				<ProjectTabContents projects={desktopProjects} tabId={"4"} />
-				<ProjectTabContents projects={mobileProjects} tabId={"5"} />
+				<ProjectTabContents projects={javaProjects} tabId={"1"} />
+				<ProjectTabContents projects={goProjects} tabId={"2"} />
+				<ProjectTabContents projects={typeScriptProjects} tabId={"3"} />
+				<ProjectTabContents projects={kotlinProjects} tabId={"4"} />
 			</TabContent>
 		</Container>
 	);
