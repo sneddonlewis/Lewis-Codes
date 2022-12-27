@@ -132,6 +132,7 @@ const desktopProjects: IProject[] = [
 ];
 
 export {
+    javaProjects,
     fullStackProjects,
     webApiProjects,
     frontendProjects,

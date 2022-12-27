@@ -8,7 +8,7 @@ import {
 	desktopProjects,
 	fullStackProjects,
 	webApiProjects,
-	frontendProjects
+	frontendProjects, javaProjects
 } from "../../data/ProjectsData";
 import ProjectTabContents from "./ProjectTabContents";
 
@@ -29,7 +29,7 @@ function Projects() {
 						style={{cursor: "pointer"}}
 						onClick={() => { toggle('1'); }}
 					>
-						Full Stack <span className="badge rounded-pill bg-success ms-3">{fullStackProjects.length}</span>
+						Java <span className="badge rounded-pill bg-success ms-3">{javaProjects.length}</span>
 					</NavLink>
 				</NavItem>
 
@@ -75,7 +75,7 @@ function Projects() {
 			</Nav>
 
 			<TabContent activeTab={activeTab}>
-				<ProjectTabContents projects={fullStackProjects} tabId={"1"} />
+				<ProjectTabContents projects={javaProjects} tabId={"1"} />
 				<ProjectTabContents projects={webApiProjects} tabId={"2"} />
 				<ProjectTabContents projects={frontendProjects} tabId={"3"} />
 				<ProjectTabContents projects={desktopProjects} tabId={"4"} />
