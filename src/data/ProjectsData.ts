@@ -21,6 +21,50 @@ const javaProjects: IProject[] = [
     },
 ]
 
+const goProjects: IProject[] = [
+    {
+        title: "Flashcards",
+        description: "CLI learning aid to test the user with flashcard type questions and answers that can be inputted interactively or loaded from a file",
+        codeUrl:
+            "https://github.com/sneddonlewis/Flashcards_go/blob/master/Flashcards/task/main.go",
+        launchable: false,
+        launchUrl: "",
+        techStack: ["go"],
+    },
+    {
+        title: "Notepad",
+        description: "An in memory CLI app providing basic CRUD functionality for notes",
+        codeUrl:
+            "https://github.com/sneddonlewis/notepad",
+        launchable: false,
+        launchUrl: "",
+        techStack: ["go"],
+    },
+]
+
+const typeScriptProjects: IProject[] = [
+    {
+        title: "Lewis Codes",
+        description: "This site. A React SPA",
+        codeUrl: "https://github.com/sneddonlewis/Lewis-Codes",
+        launchable: false,
+        launchUrl: "",
+        techStack: ["react", "ts", "aws"],
+    },
+]
+
+const kotlinProjects: IProject[] = [
+    {
+        title: "Minesweeper",
+        description: "Command Line Minesweeper game",
+        codeUrl:
+            "https://github.com/sneddonlewis/Minesweeper/tree/master/Minesweeper/task/src/minesweeper",
+        launchable: false,
+        launchUrl: "",
+        techStack: ["kotlin"],
+    },
+]
+
 const fullStackProjects: IProject[] = [
     {
         title: "Code Share",
@@ -133,6 +177,9 @@ const desktopProjects: IProject[] = [
 
 export {
     javaProjects,
+    goProjects,
+    typeScriptProjects,
+    kotlinProjects,
     fullStackProjects,
     webApiProjects,
     frontendProjects,
