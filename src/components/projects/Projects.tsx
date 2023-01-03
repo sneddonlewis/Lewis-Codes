@@ -16,7 +16,7 @@ function Projects() {
 	}
 	return (
 		<Container>
-			<h1 className="alert alert-primary">Projects</h1>
+			<h1 style={{ margin: "1em", }}>Projects</h1>
 			<Nav tabs className="nav-fill">
 
 				<NavItem>
