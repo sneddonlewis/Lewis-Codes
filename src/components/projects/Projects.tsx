@@ -53,7 +53,7 @@ function Projects() {
 					<NavLink
 						className={classnames({ active: activeTab === '4' })}
 						style={{cursor: "pointer"}}
-						onClick={() => { toggle('3'); }}
+						onClick={() => { toggle('4'); }}
 					>
 						TypeScript <span className="badge rounded-pill bg-success ms-3">{typeScriptProjects.length}</span>
 					</NavLink>
@@ -63,7 +63,7 @@ function Projects() {
 					<NavLink
 						className={classnames({ active: activeTab === '5' })}
 						style={{cursor: "pointer"}}
-						onClick={() => { toggle('4'); }}
+						onClick={() => { toggle('5'); }}
 					>
 						Kotlin <span className="badge rounded-pill bg-success ms-3">{kotlinProjects.length}</span>
 					</NavLink>
