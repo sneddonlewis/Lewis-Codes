@@ -8,7 +8,7 @@ const Certifications = () => {
 		<Container>
 			<section className="resume-section" id="certifications">
 				<div className="resume-section-content">
-					<h2 className="alert alert-primary mb-5">Certifications</h2>
+					<h1 style={{ margin: "1em", }}>Certifications</h1>
 					<ul className="list-inline dev-icons">
 						<li>
 							<a href="https://www.credly.com/badges/61cc44a7-378c-42d6-a277-54f42d42a70e/public_url"

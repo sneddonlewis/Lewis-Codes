@@ -14,11 +14,12 @@ function About() {
 		<div className="m-5">
 			<div className="h1">Lewis Sneddon</div>
 			<div className="subheading mb-5">
-				Software Developer ·
-				<Button
+				Software Developer · &nbsp;
+				<span
 					onClick={toggleModal}
-
-				><Envelope /></Button>
+				>
+					<Envelope/>
+				</span>
 				<SendEmail showModal={showModal} toggleModal={toggleModal}/>
 			</div>
 			<Icons />
@@ -35,6 +36,7 @@ function About() {
 					outline
 					color="dark"
 					size="sm"
+					style={{ margin: "1em", }}
 				>Verified skills from Pluralsight</Button></a>
 				<a target="_blank" rel="noreferrer" href="https://frontendmasters.com/u/lsneddon/">
 				<Button
@@ -42,6 +44,7 @@ function About() {
 					outline
 					color="dark"
 					size="sm"
+					style={{ margin: "1em", }}
 				>Learning record from Frontend Masters</Button></a>
 			</div>
 		</div>
