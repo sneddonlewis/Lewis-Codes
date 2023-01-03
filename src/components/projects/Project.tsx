@@ -53,6 +53,9 @@ function Project(props: IProject) {
 								case "go":
 									image = <img src={logos["go"]} alt="Go logo" />;
 									break;
+								case "rust":
+									image = <img src={logos["rust"]} alt="Rust logo" />;
+									break;
 								default:
 									image = null;
 							}
