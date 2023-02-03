@@ -53,6 +53,15 @@ const goProjects: IProject[] = [
 
 const typeScriptProjects: IProject[] = [
     {
+        title: "Bank",
+        description: "A web app simulating a bank, where a user can have various types of bank accounts and can make and receive payments",
+        codeUrl:
+            "https://github.com/sneddonlewis/SneddsyBank",
+        launchable: false,
+        launchUrl: "",
+        techStack: ["java", "spring", "react", "ts", "postgresql"],
+    },
+    {
         title: "Lewis Codes",
         description: "This site. A React SPA",
         codeUrl: "https://github.com/sneddonlewis/Lewis-Codes",
