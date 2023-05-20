@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
 	javaProjects, goProjects, typeScriptProjects, kotlinProjects, rustProjects,
@@ -7,11 +7,12 @@ import Project from './Project';
 import { SortSelector } from './SortSelector';
 
 function Projects() {
-	const allProjects = [...javaProjects, ...goProjects, ...rustProjects, ...typeScriptProjects, ...kotlinProjects];
+	const [allProjects, setAllProjects] = useState([...javaProjects, ...goProjects, ...rustProjects, ...typeScriptProjects, ...kotlinProjects]);
 	const allTech = Array.from(new Set(allProjects.map(proj => proj.techStack).flat(2)));
+
 	console.log(allTech);	
 	const actionsTechSelect = (tech: string) => {
-		console.log(`Selected ${tech}`);
+		setAllProjects([...allProjects].sort((curr, next) => curr.techStack.includes(tech) ? -1 : 1));
 	};
 	return (
 		<>
