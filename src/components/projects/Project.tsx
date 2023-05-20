@@ -12,7 +12,7 @@ function Project(props: IProject) {
 				<h3>{title}</h3>
 			</div>
 			<div className="card-body">
-				<ul className="text-start">
+				<ul className="d-flex flex-row-reverse" style={{listStyle: "none"}}>
 					{techStack.map((i) => {
 						let image;
 						switch (i) {
@@ -58,7 +58,7 @@ function Project(props: IProject) {
 							default:
 								image = null;
 						}
-						return <li className="list-inline-item" key={i}>{image}</li>;
+						return <li key={i} style={{ margin: "5px" }}>{image}</li>;
 					})}
 				</ul>
 				<p className="text-start">{description}</p>
