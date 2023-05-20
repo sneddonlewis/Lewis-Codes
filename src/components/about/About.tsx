@@ -17,6 +17,7 @@ function About() {
 				Software Developer · &nbsp;
 				<span
 					onClick={toggleModal}
+					style={{ cursor: "pointer" }}
 				>
 					<Envelope/>
 				</span>
