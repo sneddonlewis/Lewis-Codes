@@ -2,15 +2,6 @@ import {IProject} from "../Typings/IProject";
 
 const javaProjects: IProject[] = [
     {
-        title: "Bank",
-        description: "A web app simulating a bank, where a user can have various types of bank accounts and can make and receive payments",
-        codeUrl:
-            "https://github.com/sneddonlewis/SneddsyBank",
-        launchable: false,
-        launchUrl: "",
-        techStack: ["java", "spring", "react", "ts", "postgresql"],
-    },
-    {
         title: "JSON Database",
         description: "Multi-threaded database to store and retrieve JSON data. Includes a CLI client that can connect via TCP.",
         codeUrl:
@@ -52,15 +43,6 @@ const goProjects: IProject[] = [
 ];
 
 const typeScriptProjects: IProject[] = [
-    {
-        title: "Bank",
-        description: "A web app simulating a bank, where a user can have various types of bank accounts and can make and receive payments",
-        codeUrl:
-            "https://github.com/sneddonlewis/SneddsyBank",
-        launchable: false,
-        launchUrl: "",
-        techStack: ["java", "spring", "react", "ts", "postgresql"],
-    },
     {
         title: "Lewis Codes",
         description: "This site. A React SPA",

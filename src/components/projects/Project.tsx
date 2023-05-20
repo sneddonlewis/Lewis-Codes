@@ -7,8 +7,7 @@ import IProject from "../../Typings/IProjectProps";
 function Project(props: IProject) {
 	const {title, techStack, description, launchable, launchUrl, codeUrl} = props
 	return (
-		<div className="col-sm-3 m-auto mt-4" style={{ width: "20rem" }}>
-			<div className="card">
+			<div className="card" style={{width: "20rem", margin: "10px"}}>
 				<div className="card-header">
 					<h3>{title}</h3>
 				</div>
@@ -89,7 +88,6 @@ function Project(props: IProject) {
 					</div>
 				</div>
 			</div>
-		</div>
 	);
 }
 

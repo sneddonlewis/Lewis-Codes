@@ -5,8 +5,7 @@ import ITabContentsProps from "../../Typings/ITabContentsProps";
 
 function ProjectTabContents(props: ITabContentsProps) {
   return (
-    <TabPane tabId={props.tabId}>
-      <div className="row align-content-center">
+      <div className="">
         {props.projects.map((i) => {
           return (
             <Project
@@ -21,7 +20,6 @@ function ProjectTabContents(props: ITabContentsProps) {
           );
         })}
       </div>
-    </TabPane>
   );
 }
 
