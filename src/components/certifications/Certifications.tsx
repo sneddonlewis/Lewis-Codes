@@ -1,7 +1,7 @@
 import React from "react";
 
 import './Certifications.css';
-import {Container} from "reactstrap";
+import { Container, ListGroup, ListGroupItem, ListGroupItemHeading } from "reactstrap";
 
 const Certifications = () => {
 	return (
@@ -9,30 +9,28 @@ const Certifications = () => {
 			<section className="resume-section" id="certifications">
 				<div className="resume-section-content">
 					<h1 style={{ margin: "1em", }}>Certifications</h1>
-					<ul className="list-inline dev-icons">
-						<li>
-							<a href="https://www.credly.com/badges/61cc44a7-378c-42d6-a277-54f42d42a70e/public_url"
-								 target="_blank"
-								 rel="noreferrer"
-							>
-								<img
-									className="cert-badges"
-									src="https://images.credly.com/size/340x340/images/a9848abf-f8bd-474d-a9b4-6086da11a916/Oracle_Associates_Badge__1_.png"
-									alt="Oracle Certified Associate Java SE 8 Programmer"
-								/>
-								<p>Oracle Certified Associate Java SE 8</p>
-							</a>
-						</li>
-						<li className="list-inline-item">
-							<a href="https://www.credly.com/badges/f52a729d-d239-4178-9183-9e022731d144/public_url"
-								 target="_blank"
-								 rel="noreferrer"
-							>
-								<p>Microsoft Azure Fundamentals</p>
-							</a>
-						</li>
-					</ul>
-
+					<ListGroup>
+						<ListGroupItemHeading>
+							Language
+						</ListGroupItemHeading>
+						<ListGroupItem
+							href="https://www.credly.com/badges/61cc44a7-378c-42d6-a277-54f42d42a70e/public_url"
+							tag="a"
+							target="blank">
+							Oracle Certified Associate Java SE 8
+						</ListGroupItem>
+					</ListGroup>
+					<ListGroup style={{ marginTop: "2rem" }}>
+						<ListGroupItemHeading>
+							Cloud
+						</ListGroupItemHeading>
+						<ListGroupItem
+							href="https://www.credly.com/badges/f52a729d-d239-4178-9183-9e022731d144/public_url"
+							tag="a"
+							target="blank">
+							Microsoft Azure Fundamentals
+						</ListGroupItem>
+					</ListGroup>
 				</div>
 			</section>
 		</Container>

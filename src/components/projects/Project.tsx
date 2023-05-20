@@ -62,6 +62,8 @@ function Project(props: IProject) {
 					})}
 				</ul>
 				<p className="text-start">{description}</p>
+			</div>
+			<div className='card-footer'>
 				<div className="text-end">
 					{launchable && (
 						<a href={launchUrl} target="_blank" rel="noreferrer">

@@ -10,7 +10,6 @@ function Projects() {
 	const [allProjects, setAllProjects] = useState([...javaProjects, ...goProjects, ...rustProjects, ...typeScriptProjects, ...kotlinProjects]);
 	const allTech = Array.from(new Set(allProjects.map(proj => proj.techStack).flat(2)));
 
-	console.log(allTech);	
 	const actionsTechSelect = (tech: string) => {
 		setAllProjects([...allProjects].sort((curr, next) => curr.techStack.includes(tech) ? -1 : 1));
 	};
