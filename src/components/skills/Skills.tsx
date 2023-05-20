@@ -1,12 +1,11 @@
 import logos from "../../common/techLogos";
-import {Container, Button} from "reactstrap";
+import { Container } from "reactstrap";
 
 function Skills() {
 	return (
-		<Container>
-			<h1 className="alert alert-primary">Skills</h1>
-			<h3 className="m-5">Technologies</h3>
-			<ul className="list-inline m-5">
+		<Container style={{ marginTop: "3rem" }}>
+			<ul>
+				<h5>Some programming languages I know well</h5>
 				<li className="list-inline-item">
 					{/* csharp */}
 					<img src={logos["csharp"]} alt="C# logo" />
@@ -16,66 +15,38 @@ function Skills() {
 					<img src={logos["java"]} alt="Java logo" />
 				</li>
 				<li className="list-inline-item">
-					{/* Kotlin */}
-					<img src={logos["kotlin"]} alt="Kotlin logo" />
+					<img src={logos["rust"]} alt="Rust logo" />
 				</li>
 				<li className="list-inline-item">
-					{/* JavaScript */}
-					<img src={logos["js"]} alt="JavaScript logo" />
+					<img src={logos["go"]} alt="Go logo" />
 				</li>
 				<li className="list-inline-item">
-					{/* TypeScript */}
 					<img src={logos["typeScript"]} alt="TypeScript logo" />
 				</li>
+			</ul>
+			<ul>
+				<h5>Frameworks I have experience using</h5>
 				<li className="list-inline-item">
-					{/* Spring */}
 					<img src={logos["spring"]} alt="Spring logo" />
 				</li>
 				<li className="list-inline-item">
-					{/* Android */}
-					<img src={logos["android"]} alt="Android logo" />
-				</li>
-				<li className="list-inline-item">
-					{/* React */}
 					<img src={logos["react"]} alt="React logo" />
 				</li>
 				<li className="list-inline-item">
-					{/* AngularJS */}
 					<img src={logos["angular"]} alt="AngularJS logo" />
 				</li>
+			</ul>
+			<ul>
+				<h5>Cloud providers whose services I use</h5>
 				<li className="list-inline-item">
-					{/* Node */}
-					<img src={logos["node"]} alt="Node logo" />
-				</li>
-				<li className="list-inline-item">
-					{/* Azure */}
 					<img src={logos["azure"]} alt="Azure logo" />
 				</li>
 				<li className="list-inline-item">
-					{/* aws */}
 					<img src={logos["aws"]} alt="aws logo" />
 				</li>
-				<li className="list-inline-item">
-					{/* Git */}
-					<img src={logos["git"]} alt="Git logo" />
-				</li>
 			</ul>
-
-				<a target="_blank" rel="noreferrer" href="https://app.pluralsight.com/profile/lewis-sneddon">
-				<Button
-					className="ms-1"
-					outline
-					color="dark"
-					size="sm"
-				>Verified skills from Pluralsight</Button></a>
-				<a target="_blank" rel="noreferrer" href="https://frontendmasters.com/u/lsneddon/">
-				<Button
-					className="ms-1"
-					outline
-					color="dark"
-					size="sm"
-				>Learning record from Frontend Masters</Button></a>
-
+			 <h5>Verify my skills by reviewing my scores on <a  target="_blank" rel="noreferrer" href="https://app.pluralsight.com/profile/lewis-sneddon">Pluralsight</a></h5>
+			 <h5>See what I've been learning on <a target="_blank" rel="noreferrer" href="https://frontendmasters.com/u/lsneddon/">Frontend Masters</a></h5>
 		</Container>
 	);
 }
