@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 
-import {
-	javaProjects, goProjects, typeScriptProjects, kotlinProjects, rustProjects,
-} from "../../data/ProjectsData";
+import { projects } from "../../data/ProjectsData";
 import Project from './Project';
 import { SortSelector } from './SortSelector';
 
 function Projects() {
-	const [allProjects, setAllProjects] = useState([...javaProjects, ...goProjects, ...rustProjects, ...typeScriptProjects, ...kotlinProjects]);
+	const [allProjects, setAllProjects] = useState(projects);
 	const allTech = Array.from(new Set(allProjects.map(proj => proj.techStack).flat(2)));
 
 	const actionsTechSelect = (tech: string) => {
@@ -24,7 +22,7 @@ function Projects() {
 							title={i.title}
 							description={i.description}
 							codeUrl={i.codeUrl}
-							launchUrl={i.launchUrl || ""}
+							launchUrl={i.launchUrl} 
 							techStack={i.techStack}
 							launchable={i.launchable}
 							key={i.title}

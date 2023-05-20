@@ -1,13 +1,13 @@
-import {IProject} from "../Typings/IProject";
+import {Project} from "../Typings/Project";
 
-const javaProjects: IProject[] = [
+export const projects: Array<Project> = [
     {
         title: "JSON Database",
         description: "Multi-threaded database to store and retrieve JSON data. Includes a CLI client that can connect via TCP.",
         codeUrl:
             "https://github.com/sneddonlewis/Json_Database/tree/master/JSON%20Database/task/src",
         launchable: false,
-        launchUrl: "",
+        launchUrl: undefined,
         techStack: ["java"],
     },
     {
@@ -19,67 +19,77 @@ const javaProjects: IProject[] = [
         launchUrl: "https://youtu.be/1PjB4aNRjBU",
         techStack: ["java"],
     },
-];
-
-const goProjects: IProject[] = [
+    {
+        title: "Matrix Calculator",
+        description: "Basic math operations on numerical matrices. Includes addition, multiplication and transposition",
+        codeUrl: "https://github.com/sneddonlewis/Matrix_Calculator",
+        launchable: false,
+        launchUrl: undefined,
+        techStack: ["java"],
+    },
+    {
+        title: "Cinema API",
+        description: "Web API for a cinema seat booking system",
+        codeUrl: "https://github.com/sneddonlewis/Cinema_API",
+        launchable: false,
+        launchUrl: undefined,
+        techStack: ["java", "spring"],
+    },
+    {
+        title: "Code Share",
+        description: "Web app for sharing solutions to coding problems",
+        codeUrl: "https://github.com/sneddonlewis/Code_Share_React",
+        launchable: false,
+        launchUrl: undefined,
+        techStack: ["java", "spring", "react"],
+    },
+    {
+        title: "Simple Bank",
+        description: "CLI app simulating a simple bank.",
+        codeUrl: "https://github.com/sneddonlewis/SimpleBank",
+        launchable: false,
+        launchUrl: undefined,
+        techStack: ["cpp"],
+    },
     {
         title: "Flashcards",
         description: "CLI learning aid to test the user with flashcard type questions and answers that can be inputted interactively or loaded from a file",
-        codeUrl:
-            "https://github.com/sneddonlewis/Flashcards_go/blob/master/Flashcards/task/main.go",
+        codeUrl: "https://github.com/sneddonlewis/Flashcards_go/blob/master/Flashcards/task/main.go",
         launchable: false,
-        launchUrl: "",
+        launchUrl: undefined,
         techStack: ["go"],
     },
     {
         title: "Notepad",
         description: "An in memory CLI app providing basic CRUD functionality for notes",
-        codeUrl:
-            "https://github.com/sneddonlewis/notepad",
+        codeUrl: "https://github.com/sneddonlewis/notepad",
         launchable: false,
-        launchUrl: "",
+        launchUrl: undefined,
         techStack: ["go"],
     },
-];
-
-const typeScriptProjects: IProject[] = [
     {
         title: "Lewis Codes",
         description: "This site. A React SPA",
         codeUrl: "https://github.com/sneddonlewis/Lewis-Codes",
         launchable: false,
-        launchUrl: "",
+        launchUrl: undefined,
         techStack: ["react", "ts", "aws"],
     },
-];
-
-const kotlinProjects: IProject[] = [
     {
         title: "Minesweeper",
         description: "Command Line Minesweeper game",
         codeUrl:
             "https://github.com/sneddonlewis/Minesweeper/tree/master/Minesweeper/task/src/minesweeper",
         launchable: false,
-        launchUrl: "",
+        launchUrl: undefined,
         techStack: ["kotlin"],
     },
-];
-
-const rustProjects: IProject[] = [
     {
         title: "Duper",
         description: "CLI App to find duplicate files",
         codeUrl: "https://github.com/sneddonlewis/duper_cli",
         launchable: false,
-        launchUrl: "",
+        launchUrl: undefined,
         techStack: ["rust"],
     },
 ];
-
-export {
-    javaProjects,
-    goProjects,
-    typeScriptProjects,
-    kotlinProjects,
-    rustProjects,
-};

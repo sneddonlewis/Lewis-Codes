@@ -17,6 +17,8 @@ export const SortSelector = (props: SortSelectorProps) => {
                 return "AWS";
             case "ts":
                 return  "TypeScript";
+            case "cpp":
+                return "C++";
             default:
                 return `${tech.charAt(0).toUpperCase()}${tech.substring(1)}`
         }

@@ -1,10 +1,9 @@
 import { FaGithub, FaRocket } from 'react-icons/fa';
 import { Button } from "reactstrap";
 import logos from "../../common/techLogos";
+import { ProjectProps } from '../../Typings/Project';
 
-import IProject from "../../Typings/IProjectProps";
-
-function Project(props: IProject) {
+function Project(props: ProjectProps) {
 	const { title, techStack, description, launchable, launchUrl, codeUrl } = props
 	return (
 		<div className="card" style={{ width: "20rem", margin: "10px" }}>
@@ -54,6 +53,9 @@ function Project(props: IProject) {
 								break;
 							case "rust":
 								image = <img src={logos["rust"]} alt="Rust logo" />;
+								break;
+							case "cpp":
+								image = <img src={logos["cpp"]} alt="C++ logo" />;
 								break;
 							default:
 								image = null;
