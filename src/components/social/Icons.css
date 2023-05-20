@@ -25,6 +25,7 @@
     position: absolute;
     top: 0;
     font-size: 14px;
+    white-space: nowrap;
     background-color: #ffffff;
     color: #ffffff;
     padding: 5px 8px;
@@ -73,9 +74,9 @@
     color: #ffffff;
 }
 
-.wrapper .stack-overflow:hover,
-.wrapper .stack-overflow:hover .tooltip,
-.wrapper .stack-overflow:hover .tooltip::before {
+.wrapper .email:hover,
+.wrapper .email:hover .tooltip,
+.wrapper .email:hover .tooltip::before {
     background-color: #222426;
     color: #F48024;
 }

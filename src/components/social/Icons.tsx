@@ -1,6 +1,6 @@
 import React from "react";
 import "./Icons.css";
-import {FaGithub, FaLinkedin} from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 
 const Icons = () => {
@@ -14,8 +14,8 @@ const Icons = () => {
 			>
 				<div className="tooltip">Github</div>
 				<span>
-        		<FaGithub />
-      		</span>
+					<FaGithub />
+				</span>
 			</a>
 			<a
 				className="icon linkedin-in"
@@ -25,8 +25,8 @@ const Icons = () => {
 			>
 				<div className="tooltip">LinkedIn</div>
 				<span>
-        		<FaLinkedin />
-      		</span>
+					<FaLinkedin />
+				</span>
 			</a>
 		</div>
 	);

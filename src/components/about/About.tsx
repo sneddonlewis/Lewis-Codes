@@ -15,13 +15,17 @@ function About() {
 			<div className="h1">Lewis Sneddon</div>
 			<div className="subheading mb-5">
 				Software Developer · &nbsp;
+				<div className="wrapper">
 				<span
+					className="icon email"
 					onClick={toggleModal}
 					style={{ cursor: "pointer" }}
 				>
+					<div className="tooltip">Email me</div>
 					<Envelope/>
 				</span>
 				<SendEmail showModal={showModal} toggleModal={toggleModal}/>
+				</div>
 			</div>
 			<Icons />
 			<div className="m-5">
