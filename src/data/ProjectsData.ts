@@ -18,15 +18,6 @@ export const projects: Array<Project> = [
         techStack: ["rust"],
     },
     {
-        title: "Minesweeper",
-        description: "Command Line Minesweeper game",
-        codeUrl:
-            "https://github.com/sneddonlewis/Minesweeper/tree/master/Minesweeper/task/src/minesweeper",
-        launchable: false,
-        launchUrl: undefined,
-        techStack: ["kotlin"],
-    },
-    {
         title: "JSON Database",
         description: "Multi-threaded database to store and retrieve JSON data. Includes a CLI client that can connect via TCP.",
         codeUrl:
@@ -69,14 +60,6 @@ export const projects: Array<Project> = [
         techStack: ["java", "spring", "react"],
     },
     {
-        title: "Simple Bank",
-        description: "CLI app simulating a simple bank.",
-        codeUrl: "https://github.com/sneddonlewis/SimpleBank",
-        launchable: false,
-        launchUrl: undefined,
-        techStack: ["cpp"],
-    },
-    {
         title: "Flashcards",
         description: "CLI learning aid to test the user with flashcard type questions and answers that can be inputted interactively or loaded from a file",
         codeUrl: "https://github.com/sneddonlewis/Flashcards_go/blob/master/Flashcards/task/main.go",
@@ -94,7 +77,7 @@ export const projects: Array<Project> = [
     },
     {
         title: "Lewis Codes",
-        description: "This site. A React SPA",
+        description: "This site.",
         codeUrl: "https://github.com/sneddonlewis/Lewis-Codes",
         launchable: false,
         launchUrl: undefined,
