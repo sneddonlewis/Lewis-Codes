@@ -2,6 +2,31 @@ import {Project} from "../Typings/Project";
 
 export const projects: Array<Project> = [
     {
+        title: "Battleships",
+        description: "CLI Battleships Game",
+        codeUrl: "https://github.com/sneddonlewis/battleships-rs",
+        launchable: false,
+        launchUrl: undefined,
+        techStack: ["rust"],
+    },
+    {
+        title: "Duper",
+        description: "CLI App to find duplicate files",
+        codeUrl: "https://github.com/sneddonlewis/duper_cli",
+        launchable: false,
+        launchUrl: undefined,
+        techStack: ["rust"],
+    },
+    {
+        title: "Minesweeper",
+        description: "Command Line Minesweeper game",
+        codeUrl:
+            "https://github.com/sneddonlewis/Minesweeper/tree/master/Minesweeper/task/src/minesweeper",
+        launchable: false,
+        launchUrl: undefined,
+        techStack: ["kotlin"],
+    },
+    {
         title: "JSON Database",
         description: "Multi-threaded database to store and retrieve JSON data. Includes a CLI client that can connect via TCP.",
         codeUrl:
@@ -74,22 +99,5 @@ export const projects: Array<Project> = [
         launchable: false,
         launchUrl: undefined,
         techStack: ["react", "ts", "aws"],
-    },
-    {
-        title: "Minesweeper",
-        description: "Command Line Minesweeper game",
-        codeUrl:
-            "https://github.com/sneddonlewis/Minesweeper/tree/master/Minesweeper/task/src/minesweeper",
-        launchable: false,
-        launchUrl: undefined,
-        techStack: ["kotlin"],
-    },
-    {
-        title: "Duper",
-        description: "CLI App to find duplicate files",
-        codeUrl: "https://github.com/sneddonlewis/duper_cli",
-        launchable: false,
-        launchUrl: undefined,
-        techStack: ["rust"],
     },
 ];
