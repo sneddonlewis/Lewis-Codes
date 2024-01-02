@@ -44,14 +44,6 @@ export const projects: Array<Project> = [
         techStack: ["java"],
     },
     {
-        title: "Flashcards",
-        description: "CLI learning aid to test the user with flashcard type questions and answers that can be inputted interactively or loaded from a file",
-        codeUrl: "https://github.com/sneddonlewis/Flashcards_go/blob/master/Flashcards/task/main.go",
-        launchable: false,
-        launchUrl: undefined,
-        techStack: ["go"],
-    },
-    {
         title: "Notepad",
         description: "An in memory CLI app providing basic CRUD functionality for notes",
         codeUrl: "https://github.com/sneddonlewis/notepad",
