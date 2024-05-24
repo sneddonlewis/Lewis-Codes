@@ -5,6 +5,7 @@ frontend:
       commands:
         - nvm install 18.18.0
         - nvm use 18.18.0
+        - npm install -g yarn
         - yarn
     build:
       commands:
