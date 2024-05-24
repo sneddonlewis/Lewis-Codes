@@ -1,9 +1,9 @@
 import { FaGithub, FaRocket } from 'react-icons/fa';
 import { Button } from "reactstrap";
 import logos from "../../common/techLogos";
-import { LaunchableProject as ProjectProps } from '../../Typings/Project';
+import { ProjectDetail } from '../../types/ProjectTypes';
 
-function Project(props: ProjectProps) {
+function Project(props: ProjectDetail) {
 	const { title, techStack, description, launchUrl, codeUrl } = props
 	return (
 		<div className="card" style={{ width: "20rem", margin: "10px" }}>
