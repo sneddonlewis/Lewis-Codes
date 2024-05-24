@@ -6,9 +6,9 @@
 - [x] Remove test dependencies
 - [x] Remove router dependencies
 - [ ] Simplify structure
-- [ ] Upgrade React
-- [ ] Upgrade TypeScript
-- [ ] Add 'amplify.yml' and switch package manager to yarn ( set in package.json)
+- [x] Upgrade React
+- [x] Upgrade TypeScript
+- [x] Add 'amplify.yml' and switch package manager to yarn ( set in package.json)
 - [ ] Redesign
 - [ ] Add C++ projects like hangman
 - [ ] Tidy up projects ( both here and in repos )
