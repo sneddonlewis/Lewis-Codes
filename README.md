@@ -3,8 +3,8 @@
 ## TODOs
 
 - [x] Remove all styling & styling dependencies for redesign
-- [ ] Remove test dependencies
-- [ ] Remove router dependencies
+- [x] Remove test dependencies
+- [x] Remove router dependencies
 - [ ] Simplify structure
 - [ ] Upgrade React
 - [ ] Upgrade TypeScript
