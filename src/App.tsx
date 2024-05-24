@@ -1,6 +1,5 @@
 import './App.css';
 
-import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import About from './components/about/About';
 import Skills from './components/skills/Skills';
