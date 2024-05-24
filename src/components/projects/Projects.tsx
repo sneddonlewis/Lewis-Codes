@@ -1,22 +1,19 @@
-import { useState } from 'react';
-
 import { projects } from "../../data/ProjectsData";
 import Project from './Project';
-import { SortSelector } from './SortSelector';
 
 function Projects() {
-	const [allProjects, setAllProjects] = useState(projects);
-	const allTech = Array.from(new Set(allProjects.map(proj => proj.techStack).flat(2)));
+	// const [allProjects, setAllProjects] = useState(projects);
+	// const allTech = Array.from(new Set(allProjects.map(proj => proj.techStack).flat(2)));
 
-	const actionsTechSelect = (tech: string) => {
-		setAllProjects([...allProjects].sort((curr, next) => curr.techStack.includes(tech) ? -1 : 1));
-	};
+	// const actionsTechSelect = (tech: string) => {
+	// 	setAllProjects([...allProjects].sort((curr, next) => curr.techStack.includes(tech) ? -1 : 1));
+	// };
 	return (
 		<>
 			<h1>Projects</h1>
-			<SortSelector techs={allTech} actionsOn={actionsTechSelect}></SortSelector>
+			{/* <SortSelector techs={allTech} actionsOn={actionsTechSelect}></SortSelector> */}
 			<div>
-				{allProjects.map((i) => {
+				{projects.map((i) => {
 					return (
 						<Project
 							title={i.title}
