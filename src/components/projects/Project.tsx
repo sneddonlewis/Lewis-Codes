@@ -1,10 +1,10 @@
 import { FaGithub, FaRocket } from 'react-icons/fa';
 import { Button } from "reactstrap";
 import logos from "../../common/techLogos";
-import { ProjectProps } from '../../Typings/Project';
+import { LaunchableProject } from '../../Typings/Project';
 
-function Project(props: ProjectProps) {
-	const { title, techStack, description, launchable, launchUrl, codeUrl } = props
+function Project(props: LaunchableProject) {
+	const { title, techStack, description, launchUrl, codeUrl } = props
 	return (
 		<div className="card" style={{ width: "20rem", margin: "10px" }}>
 			<div className="card-header">
@@ -67,7 +67,7 @@ function Project(props: ProjectProps) {
 			</div>
 			<div className='card-footer'>
 				<div className="text-end">
-					{launchable && (
+					{launchUrl && (
 						<a href={launchUrl} target="_blank" rel="noreferrer">
 							<Button
 								className="ms-1"

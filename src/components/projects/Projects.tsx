@@ -24,7 +24,6 @@ function Projects() {
 							codeUrl={i.codeUrl}
 							launchUrl={i.launchUrl} 
 							techStack={i.techStack}
-							launchable={i.launchable}
 							key={i.title}
 						/>
 					);
