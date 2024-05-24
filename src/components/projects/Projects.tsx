@@ -13,9 +13,9 @@ function Projects() {
 	};
 	return (
 		<>
-			<h1 style={{ margin: "1em", }}>Projects</h1>
+			<h1>Projects</h1>
 			<SortSelector techs={allTech} actionsOn={actionsTechSelect}></SortSelector>
-			<div className="d-flex justify-content-around flex-wrap">
+			<div>
 				{allProjects.map((i) => {
 					return (
 						<Project
