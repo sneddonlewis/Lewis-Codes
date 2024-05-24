@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export type SortSelectorProps = {
   techs: string[],
@@ -8,6 +8,7 @@ export type SortSelectorProps = {
 export const SortSelector = (props: SortSelectorProps) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
+  console.log(dropdownOpen)
   const toggle = () => setDropdownOpen((prevState) => !prevState);
 
   const formatTechStr = (tech: string) => {

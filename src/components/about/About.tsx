@@ -1,10 +1,9 @@
-import React from 'react';
 import Icons from "../social/Icons";
 import Skills from '../skills/Skills';
 
 function About() {
 	return (
-		<div>
+		<>
 			<div>Lewis Sneddon</div>
 			<div>
 				Fullstack Developer
@@ -16,7 +15,7 @@ function About() {
 				</div>
 			</div>
 			<Skills/>
-		</div>
+		</>
 	);
 }
 

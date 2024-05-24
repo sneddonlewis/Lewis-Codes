@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Icons.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import SendEmail from "../../modal/SendEmail";
