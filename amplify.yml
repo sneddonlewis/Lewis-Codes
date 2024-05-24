@@ -3,7 +3,6 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm install -g yarn
         - yarn
     build:
       commands:
@@ -12,6 +11,3 @@ frontend:
     baseDirectory: build
     files:
       - '**/*'
-  cache:
-    paths:
-      - node_modules/**/*
