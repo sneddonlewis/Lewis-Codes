@@ -5,14 +5,14 @@ import { NavLink } from 'react-router-dom';
 
 function About() {
 	return (
-		<div className="m-5">
-			<div className="h1">Lewis Sneddon</div>
-			<div className="subheading mb-5">
+		<div>
+			<div>Lewis Sneddon</div>
+			<div>
 				Fullstack Developer
 			</div>
 			<Icons />
-			<div className="d-flex justify-content-around" style={{ marginTop: "2rem" }}>
-				<div style={{ maxWidth: "50vw" }}>
+			<div>
+				<div>
 					<small>see some example projects <NavLink to="/projects">here</NavLink></small>
 				</div>
 			</div>

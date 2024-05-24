@@ -1,17 +1,16 @@
 import { FaGithub, FaRocket } from 'react-icons/fa';
-import { Button } from "reactstrap";
 import logos from "../../common/techLogos";
 import { ProjectDetail } from '../../types/ProjectTypes';
 
 function Project(props: ProjectDetail) {
 	const { title, techStack, description, launchUrl, codeUrl } = props
 	return (
-		<div className="card" style={{ width: "20rem", margin: "10px" }}>
-			<div className="card-header">
+		<div>
+			<div>
 				<h3>{title}</h3>
 			</div>
-			<div className="card-body">
-				<ul className="d-flex flex-row-reverse" style={{listStyle: "none"}}>
+			<div>
+				<ul>
 					{techStack.map((i) => {
 						let image;
 						switch (i) {
@@ -63,31 +62,17 @@ function Project(props: ProjectDetail) {
 						return <li key={i} style={{ margin: "5px" }}>{image}</li>;
 					})}
 				</ul>
-				<p className="text-start">{description}</p>
+				<p>{description}</p>
 			</div>
-			<div className='card-footer'>
-				<div className="text-end">
+			<div>
+				<div>
 					{launchUrl && (
 						<a href={launchUrl} target="_blank" rel="noreferrer">
-							<Button
-								className="ms-1"
-								outline
-								color="dark"
-								size="sm"
-							>
-								<FaRocket /> Demo
-							</Button>
+							<FaRocket /> Demo
 						</a>
 					)}
 					<a href={codeUrl} target="_blank" rel="noreferrer">
-						<Button
-							className="ms-1"
-							outline
-							color="dark"
-							size="sm"
-						>
 							<FaGithub /> Code
-						</Button>
 					</a>
 				</div>
 			</div>
