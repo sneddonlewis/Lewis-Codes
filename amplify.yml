@@ -3,6 +3,8 @@ frontend:
   phases:
     preBuild:
       commands:
+        - nvm install 18.18.0
+        - nvm use 18.18.0
         - yarn
     build:
       commands:
@@ -11,3 +13,6 @@ frontend:
     baseDirectory: build
     files:
       - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
