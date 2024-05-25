@@ -2,7 +2,7 @@
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/mixins';
 
-$primary-rgb: rgb(13, 110, 253);
+$blue-rgb: rgb(13, 110, 253);
 $accent-rgb: rgb(72, 149, 239);
 $violet-rgb: rgb(112, 44, 249);
 $pink-rgb: rgb(214, 51, 132);
@@ -13,6 +13,8 @@ $body-bg: $body-bg-rgb;
 $body-color: $gray-300;
 
 $navbar-dark-bg: rgbd($violet-rgb, 0.5);
+
+$primary: rgbd$violet-rgb;
 
 .navbar.sn-navbar {
     background-color: rgbd($violet-rgb, 0.5) !important;
@@ -27,7 +29,7 @@ $navbar-dark-bg: rgbd($violet-rgb, 0.5);
         ),
         radial-gradient(
             ellipse at top left, 
-            rgba($primary-rgb, 0.5), 
+            rgba($blue-rgb, 0.5), 
             transparent 50%
         ),
         radial-gradient(
