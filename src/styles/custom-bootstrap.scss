@@ -12,6 +12,12 @@ $body-bg: $body-bg-rgb;
 
 $body-color: $gray-300;
 
+$navbar-dark-bg: rgbd($violet-rgb, 0.5);
+
+.navbar.sn-navbar {
+    background-color: rgbd($violet-rgb, 0.5) !important;
+}
+
 .background {
     background-image: 
         linear-gradient(
