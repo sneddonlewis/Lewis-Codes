@@ -1,4 +1,4 @@
-import React, { FormEvent, useCallback, useState } from "react"
+import React, { FormEvent, useState } from "react"
 import { Button, Form } from "react-bootstrap"
 
 type FormErrors = {
@@ -18,10 +18,7 @@ export const Contact: React.FC = () => {
   const validate = (emailAddr: string, message: string) => {
     let isValid = true
     setErrors(prevErrors => {
-      const errors = {
-        email: undefined,
-        msg: undefined,
-      } as FormErrors
+      const errors = prevErrors
       if (!emailAddr) {
         errors.email = 'I need your email address'
         isValid = false
