@@ -8,6 +8,6 @@ frontend:
       commands:
         - yarn build
   artifacts:
-    baseDirectory: build
+    baseDirectory: dist
     files:
       - '**/*'
