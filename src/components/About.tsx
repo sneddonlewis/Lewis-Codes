@@ -1,7 +1,6 @@
 import Icons from "./Icons";
-import Skills from "./Skills";
 
-function About() {
+export const About = () => {
 	return (
 		<>
 			<div>Lewis Sneddon</div>
@@ -14,9 +13,6 @@ function About() {
 					<small>developing full stackilly</small>
 				</div>
 			</div>
-			<Skills/>
 		</>
-	);
+	)
 }
-
-export default About;

@@ -1,9 +1,10 @@
 import { Container, Nav, Navbar } from "react-bootstrap"
-import About from "./About"
-import Certifications from "./Certifications"
+import { About } from "./About"
+import { Certifications } from "./Certifications"
 import { ProjectList } from "./ProjectList"
-import Skills from "./Skills"
+import { Skills } from "./Skills"
 import { useEffect, useState } from "react"
+import { Contact } from "./Contact"
 
 export const Scrollspy = () => {
   const [scroll, setScroll] = useState(false);
@@ -43,8 +44,8 @@ export const Scrollspy = () => {
           style={navbarStyles}>
           <Navbar.Brand href="#">Lewis Sneddon</Navbar.Brand>
             <Nav className="ms-auto">
-              <Nav.Link href="#skills">Skills</Nav.Link>
               <Nav.Link href="#projects">Projects</Nav.Link>
+              <Nav.Link href="#contact">Contact</Nav.Link>
             </Nav>
         </Navbar>
 
@@ -59,12 +60,17 @@ export const Scrollspy = () => {
           <div style={scrollSectionStyles}></div>
           <About  />
 
-          <div id="skills" style={scrollSectionStyles}></div>
+          <div style={scrollSectionStyles}></div>
           <Skills />
           <Certifications />
 
+
           <div id="projects" style={scrollSectionStyles}></div>
           <ProjectList />
+
+          <div id="contact" style={scrollSectionStyles}></div>
+          <Contact />
+
         </div> 
       </Container>
     </>

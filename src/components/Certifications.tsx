@@ -1,6 +1,6 @@
 import { ListGroup, ListGroupItem } from "react-bootstrap";
 
-const Certifications = () => {
+export const Certifications = () => {
 	return (
 		<div>
 				<div>
@@ -21,8 +21,5 @@ const Certifications = () => {
 					</ListGroup>
 				</div>
 		</div>
-	);
-};
-
-
-export default Certifications;
+	)
+}
