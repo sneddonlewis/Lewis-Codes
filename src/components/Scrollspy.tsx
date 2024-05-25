@@ -52,7 +52,7 @@ export const Scrollspy = () => {
           data-bs-root-margin="0px 0px -40%"
           data-bs-smooth-scroll="true" 
           className="p-3 rounded-2 mt-5"
-          tabindex="0">
+          tabIndex={0}>
           <h4 className="mt-5">About</h4>
           <About  />
 
