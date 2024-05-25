@@ -44,23 +44,23 @@ export const Scrollspy = () => {
             </Nav>
         </Navbar>
 
-        <div className="mt-5"></div>
+        <div className="m-5"></div>
 
         <div
           data-bs-spy="scroll" 
           data-bs-target="#sn-navbar"
           data-bs-root-margin="0px 0px -40%"
           data-bs-smooth-scroll="true" 
-          className="p-3 rounded-2"
+          className="p-3 rounded-2 mt-5"
           tabindex="0">
-          <h4>About</h4>
+          <h4 className="mt-5">About</h4>
           <About  />
 
-          <h4 id="skills">Skills</h4>
+          <h4 id="skills" className="mt-5">Skills</h4>
           <Skills />
           <Certifications />
 
-          <h4 id="projects">Projects</h4>
+          <h4 id="projects" className="mt-5">Projects</h4>
           <Projects />
         </div> 
       </Container>
