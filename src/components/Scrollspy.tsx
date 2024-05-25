@@ -1,7 +1,7 @@
 import { Container, Nav, Navbar } from "react-bootstrap"
 import About from "./About"
 import Certifications from "./Certifications"
-import Projects from "./Projects"
+import { ProjectList } from "./ProjectList"
 import Skills from "./Skills"
 import { useEffect, useState } from "react"
 
@@ -64,7 +64,7 @@ export const Scrollspy = () => {
           <Certifications />
 
           <div id="projects" style={scrollSectionStyles}></div>
-          <Projects />
+          <ProjectList />
         </div> 
       </Container>
     </>
