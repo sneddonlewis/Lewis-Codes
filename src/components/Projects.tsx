@@ -1,4 +1,4 @@
-import { projects } from "../../data/ProjectsData";
+import { projects } from "../data/ProjectsData";
 import Project from './Project';
 
 function Projects() {

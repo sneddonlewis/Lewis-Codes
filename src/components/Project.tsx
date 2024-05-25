@@ -1,6 +1,6 @@
 import { FaGithub, FaRocket } from 'react-icons/fa';
-import logos from "../../common/techLogos";
-import { ProjectDetail } from '../../types/ProjectTypes';
+import logos from "../common/techLogos";
+import { ProjectDetail } from '../types/ProjectTypes';
 
 function Project(props: ProjectDetail) {
 	const { title, techStack, description, launchUrl, codeUrl } = props

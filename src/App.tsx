@@ -1,9 +1,9 @@
 import './App.css';
 
-import About from './components/about/About';
-import Skills from './components/skills/Skills';
-import Certifications from './components/certifications/Certifications';
-import Projects from './components/projects/Projects';
+import About from './components/About';
+import Skills from './components/Skills';
+import Certifications from './components/Certifications';
+import Projects from './components/Projects';
 
 function App() {
   return (

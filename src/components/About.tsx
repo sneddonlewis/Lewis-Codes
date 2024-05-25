@@ -1,5 +1,5 @@
-import Icons from "../social/Icons";
-import Skills from '../skills/Skills';
+import Icons from "./Icons";
+import Skills from "./Skills";
 
 function About() {
 	return (
