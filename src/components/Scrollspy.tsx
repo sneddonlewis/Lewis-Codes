@@ -21,11 +21,15 @@ export const Scrollspy = () => {
   }, []);
 
   const navbarStyles = {
-            backgroundColor: scroll ? 'rgba(112, 44, 249, 0.5)' : 'rgba(112, 44, 249, 0.95)',
-            transition: 'background-color 0.3s',
-            backgroundImage: 'linear-gradient(to bottom, rgba(112, 44, 249, 0.7), rgba(112, 44, 249, 0))',
-            boxShadow: '0 2px 5px rgba(0,0,0,0.2)'
-          }
+    backgroundColor: scroll ? 'rgba(112, 44, 249, 0.5)' : 'rgba(112, 44, 249, 0.95)',
+    transition: 'background-color 0.3s',
+    backgroundImage: 'linear-gradient(to bottom, rgba(112, 44, 249, 0.7), rgba(112, 44, 249, 0))',
+    boxShadow: '0 2px 5px rgba(0,0,0,0.2)'
+  }
+
+  const scrollSectionStyles = {
+    marginBottom: '6rem'
+  }
 
   return (
     <>
@@ -44,23 +48,22 @@ export const Scrollspy = () => {
             </Nav>
         </Navbar>
 
-        <div className="m-5"></div>
-
         <div
           data-bs-spy="scroll" 
           data-bs-target="#sn-navbar"
           data-bs-root-margin="0px 0px -40%"
           data-bs-smooth-scroll="true" 
-          className="p-3 rounded-2 mt-5"
+          className="p-3 rounded-2"
           tabIndex={0}>
-          <h4 className="mt-5">About</h4>
+
+          <div style={scrollSectionStyles}></div>
           <About  />
 
-          <h4 id="skills" className="mt-5">Skills</h4>
+          <div id="skills" style={scrollSectionStyles}></div>
           <Skills />
           <Certifications />
 
-          <h4 id="projects" className="mt-5">Projects</h4>
+          <div id="projects" style={scrollSectionStyles}></div>
           <Projects />
         </div> 
       </Container>
