@@ -1,0 +1,39 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
+$accent-color: rgb(255, 123, 0);
+$violet-color: rgb(138, 43, 226);
+$pink-color: rgb(255, 20, 147);
+$body-bg-color: rgb(33, 37, 41);
+
+.background {
+    background-image: 
+        linear-gradient(
+            180deg, 
+            rgba($body-bg-color, 0.01), 
+            rgba($body-bg-color, 1) 85%
+        ),
+        radial-gradient(
+            ellipse at top left, 
+            rgba($accent-color, 0.5), 
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at top right, 
+            rgba($violet-color, 0.5), 
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at center right, 
+            rgba($pink-color, 0.5), 
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at center left, 
+            rgba($pink-color, 0.5), 
+            transparent 50%
+        );
+}
+
+@import 'bootstrap/scss/bootstrap';

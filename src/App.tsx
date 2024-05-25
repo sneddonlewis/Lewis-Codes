@@ -6,10 +6,12 @@ import Projects from './components/Projects';
 function App() {
   return (
     <>
+      <div className='background'>
       <About />
       <Skills />
       <Certifications />
       <Projects />
+      </div>
     </>
   );
 }
