@@ -3,7 +3,7 @@
 ## Development
 
 Requirements:
-- node ^18.18.0 || >= 20.0.0
+- node >=18.18.0
 - yarn >=1.22.0
 - go
 - make
