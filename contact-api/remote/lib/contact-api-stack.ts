@@ -15,7 +15,7 @@ export class ContactApiStack extends cdk.Stack {
 
     const fn = new cdk.aws_lambda.Function(this, 'LambdaFunction', {
       runtime: cdk.aws_lambda.Runtime.PROVIDED_AL2,
-      code: cdk.aws_lambda.AssetCode.fromAsset('lambda-compiled/function.zip'),
+      code: cdk.aws_lambda.AssetCode.fromAsset('../out/function.zip'),
       handler: 'main',
     });
 
