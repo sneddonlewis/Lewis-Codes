@@ -12,6 +12,7 @@ Requirements:
 Run the ui locally
 ```bash
 cd ui
+yarn
 yarn dev
 ```
 
