@@ -5,6 +5,7 @@ import { ProjectList } from "./ProjectList"
 import { Skills } from "./Skills"
 import { useEffect, useState } from "react"
 import { Contact } from "./Contact"
+import { FaArrowUp } from "react-icons/fa"
 
 export const Scrollspy = () => {
   const [scroll, setScroll] = useState(false);
@@ -33,6 +34,10 @@ export const Scrollspy = () => {
     paddingTop: '6rem',
   }
 
+  const navBrandStyle = {
+    visibility: scroll ? 'visible' : 'hidden',
+  }
+
   return (
     <>
       <Container>
@@ -43,12 +48,12 @@ export const Scrollspy = () => {
           fixed="top"
           className="navbar px-3 mb-3"
           style={navbarStyles}>
-          <Navbar.Brand href="#">Lewis Sneddon</Navbar.Brand>
-            <Nav className="ms-auto">
-              <Nav.Link href="#skills">Skills</Nav.Link>
-              <Nav.Link href="#projects">Projects</Nav.Link>
-              <Nav.Link href="#contact">Contact</Nav.Link>
-            </Nav>
+          <Navbar.Brand href="#" style={navBrandStyle}><FaArrowUp /></Navbar.Brand>
+          <Nav className="ms-auto">
+            <Nav.Link href="#skills">Skills</Nav.Link>
+            <Nav.Link href="#projects">Projects</Nav.Link>
+            <Nav.Link href="#contact">Contact</Nav.Link>
+          </Nav>
         </Navbar>
 
         <div
