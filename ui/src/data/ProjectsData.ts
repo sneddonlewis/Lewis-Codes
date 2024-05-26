@@ -64,6 +64,6 @@ export const projects: Array<ProjectDetail> = [
         description: "This site.",
         codeUrl: "https://github.com/sneddonlewis/Lewis-Codes",
         launchUrl: undefined,
-        techStack: ["react", "ts", "aws"],
+        techStack: ["react", "ts", "go", "aws"],
     },
 ];
