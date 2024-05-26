@@ -23,25 +23,24 @@ export const Contact: React.FC = () => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
-    let invalid = false
+    let valid = true
 
     if (!email) {
       setEmailError('I need your email address')
-      invalid = true
+      valid = false
     } else if (!basicEmailRegex.test(email)) {
       setEmailError("That's not a valid email address")
-      invalid = true
+      valid = false
     } else {
       setEmailError(undefined)
     }
     if (!msg) {
       setMsgError('Oops, looks like you forgot to add your message')
-      invalid = true
+      valid = false
     } else {
       setMsgError(undefined)
     }
-    if (invalid) {
-      console.log('invalid')
+    if (!valid) {
       return
     }
 
@@ -51,7 +50,7 @@ export const Contact: React.FC = () => {
 
   return (
     <>
-      <h1>Contact Form</h1>
+      <h1>Send me a message</h1>
       <Form>
         <Form.Group className="mb-3" controlId={emailId}>
           <Form.Label>Email address</Form.Label>
