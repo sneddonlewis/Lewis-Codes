@@ -6,8 +6,12 @@ type MessagePostRequest = {
   message: string
 }
 
-export const Contact: React.FC = () => {
+type MessageResponse = {
+  message_status: string,
+  message_body: MessagePostRequest,
+}
 
+export const Contact: React.FC = () => {
   const postMessage = (request: MessagePostRequest) => {
     const apiUrl = 'https://24frvheey0.execute-api.eu-west-2.amazonaws.com/prod/message'
     fetch(apiUrl, {
@@ -17,9 +21,12 @@ export const Contact: React.FC = () => {
       },
       body: JSON.stringify(request),
     })
-    .then(response => console.log(response.json()))
+    .then(response => response.json())
+    .then(body => setServerResponse(body))
     .catch(err => console.error(err))
   }
+
+  const [serverResponse, setServerResponse] = useState<MessageResponse | undefined>(undefined)
 
   const [msg, setMsg] = useState('')
   const [email, setEmail] = useState('')
@@ -103,6 +110,11 @@ export const Contact: React.FC = () => {
         >
           Send
         </Button>
+        {serverResponse && 
+          <div>
+            <small className="text-success">{JSON.stringify(serverResponse)}</small>
+          </div>
+        }
       </Form>
     </>
   )
