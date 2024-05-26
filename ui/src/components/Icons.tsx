@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Icons.css";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaRegEnvelope } from "react-icons/fa";
 
 
 const Icons = () => {
@@ -26,21 +26,23 @@ const Icons = () => {
 				className="icon linkedin-in"
 				href="https://www.linkedin.com/in/lsneddoncodes/"
 				target="_blank"
-				rel="noreferrer"
-			>
-				<div className="tooltip">LinkedIn</div>
-				<span>
-					<FaLinkedin />
-				</span>
-			</a>
-					<span
-						className="icon email"
-						onClick={toggleModal}
-						style={{ cursor: "pointer" }}
-					>
-						<div className="tooltip">Email me</div>
-					</span>
-		</div>
+        rel="noreferrer"
+      >
+        <div className="tooltip">LinkedIn</div>
+        <span>
+          <FaLinkedin />
+        </span>
+        </a>
+      <a
+        className="icon email"
+        href="#contact"
+      >
+        <div className="tooltip">Get in touch</div>
+        <span>
+          <FaRegEnvelope />
+        </span>
+      </a>
+    </div>
 	);
 };
 
