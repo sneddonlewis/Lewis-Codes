@@ -1,8 +1,10 @@
-# Welcome to your CDK TypeScript project
+# AWS CDK
 
-This is a blank project for CDK development with TypeScript.
+CDK development with TypeScript.
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
+
+Individual projects are responsible for creating their own output following the location convention `<project-dir>/out/<bin-name>`.  
 
 ## Useful commands
 
