@@ -3,7 +3,7 @@ import { About } from "./About"
 import { Certifications } from "./Certifications"
 import { ProjectList } from "./ProjectList"
 import { Skills } from "./Skills"
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Contact } from "./Contact"
 import { FaArrowUp } from "react-icons/fa"
 
@@ -34,7 +34,7 @@ export const Scrollspy = () => {
     paddingTop: '6rem',
   }
 
-  const navBrandStyle = {
+  const navBrandStyle: React.CSSProperties = {
     visibility: scroll ? 'visible' : 'hidden',
   }
 

@@ -1,14 +1,8 @@
-import { useState } from "react";
 import "./Icons.css";
 import { FaGithub, FaLinkedin, FaRegEnvelope } from "react-icons/fa";
 
 
 const Icons = () => {
-	const [showModal, setShowModal] = useState(false);
-
-	function toggleModal() {
-		setShowModal(!showModal);
-	}
 	return (
 		<div className="wrapper">
 			<a
