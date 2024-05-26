@@ -48,7 +48,9 @@ export const Scrollspy = () => {
           fixed="top"
           className="navbar px-3 mb-3"
           style={navbarStyles}>
-          <Navbar.Brand href="#" style={navBrandStyle}><FaArrowUp /></Navbar.Brand>
+          <Navbar.Brand href="#" style={navBrandStyle}>
+            <FaArrowUp />
+          </Navbar.Brand>
           <Nav className="ms-auto">
             <Nav.Link href="#skills">Skills</Nav.Link>
             <Nav.Link href="#projects">Projects</Nav.Link>
