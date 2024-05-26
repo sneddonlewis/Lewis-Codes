@@ -2,7 +2,7 @@ build:
 	@echo "🏗️  Compiling Go binary for AWS lambda"
 	@GOOS=linux GOARCH=amd64 go build -o out/bootstrap
 	@echo "⚙️   Making bootstrap executable"
-	@chmod +x out/bootstrap
+	@cd out && chmod +x bootstrap
 	@echo "📦  Creating ZIP file"
-	@zip out/function.zip out/bootstrap
+	@cd out && zip function.zip bootstrap
 	@echo "🚀  Build complete"
