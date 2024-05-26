@@ -4,8 +4,8 @@ export const Certifications = () => {
 	return (
 		<div>
 				<div>
-					<h1>Certifications</h1>
-					<ListGroup style={{ marginTop: "2rem" }}>
+					<span className="h5">Certifications</span>
+					<ListGroup style={{ marginTop: "1rem" }}>
 						<ListGroupItem
               action
 							href="https://www.credly.com/badges/61cc44a7-378c-42d6-a277-54f42d42a70e/public_url"
