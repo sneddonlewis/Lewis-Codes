@@ -33,6 +33,12 @@ func health(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespon
 }
 
 func message(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
+	corsHeaders := map[string]string{
+		"Access-Control-Allow-Origin":  "*",
+		"Access-Control-Allow-Methods": "POST, OPTIONS",
+		"Access-Control-Allow-Headers": "Content-Type, Authorization",
+	}
+
 	var messageRequest Message
 
 	err := json.Unmarshal([]byte(request.Body), &messageRequest)
@@ -40,6 +46,7 @@ func message(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 		return events.APIGatewayProxyResponse{
 			Body:       "invalid request",
 			StatusCode: http.StatusBadRequest,
+			Headers:    corsHeaders,
 		}, err
 	}
 
@@ -48,6 +55,7 @@ func message(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 		return events.APIGatewayProxyResponse{
 			Body:       "require email and message",
 			StatusCode: http.StatusUnprocessableEntity,
+			Headers:    corsHeaders,
 		}, fmt.Errorf("request incorrectly formed")
 	}
 
@@ -64,12 +72,14 @@ func message(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 		return events.APIGatewayProxyResponse{
 			Body:       "server failure",
 			StatusCode: http.StatusInternalServerError,
+			Headers:    corsHeaders,
 		}, fmt.Errorf("server failure")
 	}
 
 	return events.APIGatewayProxyResponse{
 		Body:       string(jsonResponse),
 		StatusCode: http.StatusOK,
+		Headers:    corsHeaders,
 	}, nil
 }
 
