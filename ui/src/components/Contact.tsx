@@ -1,7 +1,26 @@
 import React, { FormEvent, useState } from "react"
 import { Button, Form } from "react-bootstrap"
 
+type MessagePostRequest = {
+  email: string,
+  message: string
+}
+
 export const Contact: React.FC = () => {
+
+  const postMessage = (request: MessagePostRequest) => {
+    const apiUrl = 'https://24frvheey0.execute-api.eu-west-2.amazonaws.com/prod/message'
+    fetch(apiUrl, {
+      method: 'Post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(request),
+    })
+    .then(response => console.log(response.json()))
+    .catch(err => console.error(err))
+  }
+
   const [msg, setMsg] = useState('')
   const [email, setEmail] = useState('')
 
@@ -44,7 +63,10 @@ export const Contact: React.FC = () => {
       return
     }
 
-    console.log(`Time for a POST request with Email: ${email} & Message: ${msg}`)
+    postMessage({
+      email: email,
+      message: msg,
+    })
   }
 
 
