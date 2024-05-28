@@ -59,11 +59,22 @@ func message(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 		}, fmt.Errorf("request incorrectly formed")
 	}
 
+	client := NewClient()
+
+	err = client.CreateMessage(messageRequest.Email, messageRequest.Message)
+	if err != nil {
+		return events.APIGatewayProxyResponse{
+			Body:       "there was an error persisting your message",
+			StatusCode: http.StatusInternalServerError,
+			Headers:    corsHeaders,
+		}, fmt.Errorf("request incorrectly formed")
+	}
+
 	response := struct {
 		MessageStatus string  `json:"message_status"`
 		MessageBody   Message `json:"message_body"`
 	}{
-		MessageStatus: "server is still being developed so this message is returned unprocessed",
+		MessageStatus: "Message Sent",
 		MessageBody:   messageRequest,
 	}
 
