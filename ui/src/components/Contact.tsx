@@ -76,6 +76,16 @@ export const Contact: React.FC = () => {
     })
   }
 
+  if (serverResponse) {
+    return (
+      <>
+        <h1>Thanks, I've got your message</h1>
+        <div>
+          <small className="text-info">{JSON.stringify(serverResponse)}</small>
+        </div>
+      </>
+    )
+  }
 
   return (
     <>
