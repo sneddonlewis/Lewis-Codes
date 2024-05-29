@@ -22,9 +22,9 @@ export const Scrollspy = () => {
   }, []);
 
   const navbarStyles = {
-    backgroundColor: scroll ? 'rgba(112, 44, 249, 0.5)' : 'rgba(112, 44, 249, 0.95)',
+    backgroundColor: scroll ? 'rgba(var(--primary-rgb), 0.5)' : 'rgba(var(--primary-rgb), 0.95)',
     transition: 'background-color 0.3s',
-    backgroundImage: 'linear-gradient(to bottom, rgba(112, 44, 249, 0.7), rgba(112, 44, 249, 0))',
+    backgroundImage: 'linear-gradient(to bottom, rgba(var(--primary-rgb), 0.7), rgba(var(--primary-rgb), 0))',
     boxShadow: '0 2px 5px rgba(0,0,0,0.2)'
   }
 
