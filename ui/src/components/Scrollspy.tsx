@@ -72,7 +72,6 @@ export const Scrollspy = () => {
 
           <div id="skills" style={scrollSectionContainer}>
             <Skills />
-            <Certifications />
           </div>
 
           <div id="projects" style={scrollSectionContainer}>
