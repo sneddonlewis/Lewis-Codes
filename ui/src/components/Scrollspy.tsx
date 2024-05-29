@@ -1,6 +1,5 @@
 import { Container, Nav, Navbar } from "react-bootstrap"
 import { About } from "./About"
-import { Certifications } from "./Certifications"
 import { ProjectList } from "./ProjectList"
 import { Skills } from "./Skills"
 import React, { useEffect, useState } from "react"
