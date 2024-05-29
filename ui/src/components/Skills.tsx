@@ -9,6 +9,14 @@ export const Skills: React.FC = () => {
   }
   return (
     <div>
+      <div style={pluralsightLinkStyle}>
+        <p className="h6">Verified skills from <a
+          target="_blank" 
+          rel="noreferrer" 
+          href={pluralsightSkillsPage}
+        >Pluralsight</a>
+        </p>
+      </div>
       <p className="h6">Frontend</p>
       <TechLogoList techList={[
         'ts',
@@ -36,14 +44,6 @@ export const Skills: React.FC = () => {
       <TechLogoList techList={[
         'postgresql'
       ]} />
-      <div style={pluralsightLinkStyle}>
-        <p className="h6">Verified skills from <a
-          target="_blank" 
-          rel="noreferrer" 
-          href={pluralsightSkillsPage}
-        >Pluralsight</a>
-        </p>
-      </div>
     </div>
     );
 }
