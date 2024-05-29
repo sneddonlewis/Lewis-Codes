@@ -32,13 +32,14 @@ npx cdk deploy # will ask for confirmation
 
 - [ ] Scrollspy doesn't activate links in nav bar
 - [ ] Certifications aren't links
-- [ ] See about using Pluralsight api to display skills
 - [ ] Update projects ( let's have much less but good quality )
 - [ ] Move projects data to S3 bucket
 - [ ] Start screen needs a tidy up ( maybe color the social icons )
+- [ ] Environment variables for dev/prod
 
 ### Contact API
 
-- [ ] Save message in DynamoDB
+- [x] Save message in DynamoDB
 - [ ] Use notification service ( probably SNS ) to notify me of message received
 - [ ] Email sender with a "got the message, thanks"
+- [ ] Abstract aws services
