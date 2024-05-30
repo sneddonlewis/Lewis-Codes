@@ -11,6 +11,7 @@ import (
 
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
+	"github.com/julienschmidt/httprouter"
 )
 
 func main() {
@@ -28,9 +29,8 @@ func main() {
 	// })
 
 	// "github.com/julienschmidt/httprouter" <- let's use this router instead
-	router := http.NewServeMux()
-
-	router.HandleFunc("/health", healthCheckHandler)
+	router := httprouter.New()
+	router.HandlerFunc(http.MethodGet, "/health", healthCheckHandler)
 
 	lambda.Start(LambdaAdapter(router))
 }
@@ -114,7 +114,7 @@ type Message struct {
 	Message string `json:"message"`
 }
 
-func LambdaAdapter(h http.Handler) func(ctx context.Context, req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
+func LambdaAdapter(router *httprouter.Router) func(ctx context.Context, req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
 	return func(ctx context.Context, req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
 		// Convert the Lambda request to an http.Request
 		httpRequest, err := lambdaRequestToHttpRequest(ctx, req)
@@ -125,8 +125,8 @@ func LambdaAdapter(h http.Handler) func(ctx context.Context, req events.APIGatew
 		// Capture the response using a ResponseRecorder
 		responseRecorder := NewResponseRecorder()
 
-		// Serve the request using the provided http.Handler
-		h.ServeHTTP(responseRecorder, httpRequest)
+		// Serve the request using the provided httprouter.Router
+		router.ServeHTTP(responseRecorder, httpRequest)
 
 		// Convert the recorded response to APIGatewayProxyResponse
 		return responseRecorder.ToAPIGatewayProxyResponse(), nil
@@ -134,30 +134,27 @@ func LambdaAdapter(h http.Handler) func(ctx context.Context, req events.APIGatew
 }
 
 func lambdaRequestToHttpRequest(ctx context.Context, req events.APIGatewayProxyRequest) (*http.Request, error) {
-	// Mimic the body of the request
 	body := io.NopCloser(bytes.NewReader([]byte(req.Body)))
 
-	// Create the request with appropriate method, path and headers
-	request, err := http.NewRequestWithContext(ctx, req.HTTPMethod, req.Path, body)
+	httpReq, err := http.NewRequestWithContext(ctx, req.HTTPMethod, req.Path, body)
 	if err != nil {
 		return nil, err
 	}
 
-	request.Header = make(http.Header)
+	httpReq.Header = make(http.Header)
 	for key, value := range req.Headers {
-		request.Header.Set(key, value)
+		httpReq.Header.Set(key, value)
 	}
 
-	// Add query string parameters if any
-	q := request.URL.Query()
+	q := httpReq.URL.Query()
 	for key, values := range req.MultiValueQueryStringParameters {
 		for _, value := range values {
 			q.Add(key, value)
 		}
 	}
-	request.URL.RawQuery = q.Encode()
+	httpReq.URL.RawQuery = q.Encode()
 
-	return request, nil
+	return httpReq, nil
 }
 
 type ResponseRecorder struct {
