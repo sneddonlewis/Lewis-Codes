@@ -8,10 +8,9 @@ import (
 	"strings"
 
 	"github.com/aws/aws-lambda-go/events"
-	"github.com/julienschmidt/httprouter"
 )
 
-func HttpRouterToLambda(router *httprouter.Router) func(ctx context.Context, req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
+func HttpRouterToLambda(router http.Handler) func(ctx context.Context, req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
 	return func(ctx context.Context, req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
 		httpRequest, err := lambdaRequestToHttpRequest(ctx, req)
 		if err != nil {
