@@ -31,7 +31,7 @@ func main() {
 	router := httprouter.New()
 	router.HandlerFunc(http.MethodGet, "/health", healthCheckHandler)
 
-	lambda.Start(adapter.LambdaAdapter(router))
+	lambda.Start(adapter.HttpRouterToLambda(router))
 }
 
 func healthCheckHandler(res http.ResponseWriter, req *http.Request) {
