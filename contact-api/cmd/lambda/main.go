@@ -13,7 +13,6 @@ import (
 	"contact.sneddsy.com/adapter"
 	"contact.sneddsy.com/db"
 
-	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/julienschmidt/httprouter"
 )
@@ -21,19 +20,6 @@ import (
 type application struct{}
 
 func main() {
-	// lambda.Start(func(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
-	// 	switch request.Path {
-	// 	case "/health":
-	// 		return health(request)
-	// 	case "/message":
-	// 		return message(request)
-	// 	default:
-	// 		return events.APIGatewayProxyResponse{
-	// 			StatusCode: http.StatusMethodNotAllowed,
-	// 		}, nil
-	// 	}
-	// })
-
 	app := application{}
 
 	router := httprouter.New()
@@ -56,47 +42,20 @@ func (app *application) messageHandler(w http.ResponseWriter, r *http.Request) {
 	var messageRequest Message
 	err := app.readJSON(w, r, &messageRequest)
 	if err != nil {
+		app.writeJSON(w, http.StatusUnprocessableEntity, "body does not conform to schema", nil)
 		return
 	}
-	_ = app.writeJSON(w, http.StatusOK, messageRequest, nil)
-}
 
-func message(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
-	corsHeaders := map[string]string{
-		"Access-Control-Allow-Origin":  "*",
-		"Access-Control-Allow-Methods": "POST, OPTIONS",
-		"Access-Control-Allow-Headers": "Content-Type, Authorization",
-	}
-
-	var messageRequest Message
-
-	err := json.Unmarshal([]byte(request.Body), &messageRequest)
-	if err != nil {
-		return events.APIGatewayProxyResponse{
-			Body:       "invalid request",
-			StatusCode: http.StatusBadRequest,
-			Headers:    corsHeaders,
-		}, err
-	}
-
-	// validation
 	if messageRequest.Email == "" || messageRequest.Message == "" {
-		return events.APIGatewayProxyResponse{
-			Body:       "require email and message",
-			StatusCode: http.StatusUnprocessableEntity,
-			Headers:    corsHeaders,
-		}, fmt.Errorf("request incorrectly formed")
+		app.writeJSON(w, http.StatusUnprocessableEntity, "require email and message", nil)
+		return
 	}
-
 	client := db.NewClient()
 
 	err = client.CreateMessage(messageRequest.Email, messageRequest.Message)
 	if err != nil {
-		return events.APIGatewayProxyResponse{
-			Body:       "there was an error persisting your message",
-			StatusCode: http.StatusInternalServerError,
-			Headers:    corsHeaders,
-		}, fmt.Errorf("request incorrectly formed")
+		app.writeJSON(w, http.StatusInternalServerError, "error writing to db", nil)
+		return
 	}
 
 	response := struct {
@@ -107,20 +66,7 @@ func message(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 		MessageBody:   messageRequest,
 	}
 
-	jsonResponse, err := json.Marshal(response)
-	if err != nil {
-		return events.APIGatewayProxyResponse{
-			Body:       "server failure",
-			StatusCode: http.StatusInternalServerError,
-			Headers:    corsHeaders,
-		}, fmt.Errorf("server failure")
-	}
-
-	return events.APIGatewayProxyResponse{
-		Body:       string(jsonResponse),
-		StatusCode: http.StatusOK,
-		Headers:    corsHeaders,
-	}, nil
+	_ = app.writeJSON(w, http.StatusOK, response, nil)
 }
 
 type Message struct {
@@ -159,22 +105,6 @@ func (app *application) readCSV(qs url.Values, key string, defaultValue []string
 	return strings.Split(csv, ",")
 }
 
-// Returns an int from the query string for the provided key or the provided default.
-// Adds parse errors to provided validator.
-// func (app *application) readInt(qs url.Values, key string, defaultValue int, v *validator.Validator) int {
-// 	s := qs.Get(key)
-// 	if s == "" {
-// 		return defaultValue
-// 	}
-// 	i, err := strconv.Atoi(s)
-//
-// 	if err != nil {
-// 		v.AddError(key, "must be an integer value")
-// 		return defaultValue
-// 	}
-// 	return i
-// }
-
 func (app *application) writeJSON(w http.ResponseWriter, status int, data any, headers http.Header) error {
 	// TODO - Only in development
 	// MarshallIndent is convenient for terminals but has a cost
@@ -182,11 +112,6 @@ func (app *application) writeJSON(w http.ResponseWriter, status int, data any, h
 	if err != nil {
 		return err
 	}
-	// corsHeaders := map[string]string{
-	// 	"Access-Control-Allow-Origin":  "*",
-	// 	"Access-Control-Allow-Methods": "POST, OPTIONS",
-	// 	"Access-Control-Allow-Headers": "Content-Type, Authorization",
-	// }
 
 	// a newline makes it easier to view in the terminal
 	js = append(js, '\n')
@@ -246,20 +171,3 @@ func (app *application) readJSON(w http.ResponseWriter, r *http.Request, dst any
 
 	return nil
 }
-
-// Run a function in the background. Recover from and log any panics.
-// func (app *application) background(fn func()) {
-// 	app.backgroundWG.Add(1)
-//
-// 	go func() {
-// 		defer app.backgroundWG.Done()
-//
-// 		defer func() {
-// 			if err := recover(); err != nil {
-// 				app.logger.Error(fmt.Sprintf("%/", err))
-// 			}
-// 		}()
-//
-// 		fn()
-// 	}()
-// }
