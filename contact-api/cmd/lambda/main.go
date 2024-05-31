@@ -12,6 +12,7 @@ import (
 
 	"contact.sneddsy.com/adapter"
 	"contact.sneddsy.com/db"
+	"contact.sneddsy.com/models"
 
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/julienschmidt/httprouter"
@@ -20,7 +21,6 @@ import (
 type application struct{}
 
 func main() {
-	app := application{}
 
 	router := httprouter.New()
 	router.HandlerFunc(http.MethodGet, "/health", app.healthCheckHandler)
@@ -39,7 +39,7 @@ func (app *application) healthCheckHandler(w http.ResponseWriter, r *http.Reques
 }
 
 func (app *application) messageHandler(w http.ResponseWriter, r *http.Request) {
-	var messageRequest Message
+	var messageRequest models.Message
 	err := app.readJSON(w, r, &messageRequest)
 	if err != nil {
 		app.writeJSON(w, http.StatusUnprocessableEntity, "body does not conform to schema", nil)
@@ -59,19 +59,14 @@ func (app *application) messageHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	response := struct {
-		MessageStatus string  `json:"message_status"`
-		MessageBody   Message `json:"message_body"`
+		MessageStatus string         `json:"message_status"`
+		MessageBody   models.Message `json:"message_body"`
 	}{
 		MessageStatus: "Message Sent",
 		MessageBody:   messageRequest,
 	}
 
 	_ = app.writeJSON(w, http.StatusOK, response, nil)
-}
-
-type Message struct {
-	Email   string `json:"email"`
-	Message string `json:"message"`
 }
 
 func (app *application) readIDParam(r *http.Request) (int64, error) {
