@@ -6,3 +6,6 @@ build:
 	@echo "📦  Creating ZIP file"
 	@cd out && zip function.zip bootstrap
 	@echo "🚀  Build complete"
+
+dev:
+	go run ./cmd/api
