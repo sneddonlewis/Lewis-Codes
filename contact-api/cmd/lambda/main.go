@@ -9,6 +9,8 @@ import (
 	"net/http"
 	"strings"
 
+	"contact.sneddsy.com/db"
+
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/julienschmidt/httprouter"
@@ -74,7 +76,7 @@ func message(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 		}, fmt.Errorf("request incorrectly formed")
 	}
 
-	client := NewClient()
+	client := db.NewClient()
 
 	err = client.CreateMessage(messageRequest.Email, messageRequest.Message)
 	if err != nil {
