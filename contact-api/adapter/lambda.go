@@ -13,19 +13,12 @@ import (
 
 func HttpRouterToLambda(router *httprouter.Router) func(ctx context.Context, req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
 	return func(ctx context.Context, req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
-		// Convert the Lambda request to an http.Request
 		httpRequest, err := lambdaRequestToHttpRequest(ctx, req)
 		if err != nil {
 			return events.APIGatewayProxyResponse{StatusCode: http.StatusBadRequest}, err
 		}
-
-		// Capture the response using a ResponseRecorder
 		responseRecorder := NewResponseRecorder()
-
-		// Serve the request using the provided httprouter.Router
 		router.ServeHTTP(responseRecorder, httpRequest)
-
-		// Convert the recorded response to APIGatewayProxyResponse
 		return responseRecorder.ToAPIGatewayProxyResponse(), nil
 	}
 }
