@@ -1,41 +1,66 @@
 import { FaGithub, FaRocket } from 'react-icons/fa';
 import { ProjectDetail } from '../types/ProjectTypes';
-import { Button, Card, CardBody, CardFooter, CardHeader, CardText } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { TechStack } from './TechLogoListItem';
 
 
 function Project(props: ProjectDetail) {
   const { title, techStack, description, launchUrl, codeUrl } = props
 
+  const panelBoxShadow = '0 2px 4px rgba(0, 0, 0, 0.2), 0 6px 10px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(0, 0, 0, 0.1)'
+
+  const projectContainerStyle: React.CSSProperties = {
+    marginTop: '2rem',
+    borderRadius: '10px',
+    backgroundColor: 'var(--bs-body-bg)',
+    boxShadow: panelBoxShadow,
+  }
+
+  const projectHeaderStyle: React.CSSProperties = {
+    padding: '1rem',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  }
+
+  const projectFooterStyle: React.CSSProperties = {
+    padding: '1rem',
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  }
+
+  const projectBodyStyle: React.CSSProperties = {
+    padding: '1rem',
+  }
+
   return (
-    <div style={{ marginTop: '2rem' }} >
-      <Card>
-        <CardHeader>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <h4>{title}</h4>
-            <TechStack techList={techStack} />
-          </div>
-        </CardHeader>
-        <CardBody>
-          <CardText>{description}</CardText>
-        </CardBody>
-        <CardFooter>
-          {launchUrl && (
-            <a href={launchUrl} target="_blank" rel="noreferrer">
-              <Button variant='dark'>
-                <FaRocket /> Demo
-              </Button>
-            </a>
-          )}
+    <div style={projectContainerStyle} >
+      <div style={projectHeaderStyle}>
+        <h4>{title}</h4>
+        <TechStack techList={techStack} />
+      </div>
 
-          <a href={codeUrl} target="_blank" rel="noreferrer">
+      <div style={projectBodyStyle} >
+        <p>{description}</p>
+      </div>
+
+      <div style={projectFooterStyle}>
+        {launchUrl && (
+          <a href={launchUrl} target="_blank" rel="noreferrer">
             <Button variant='dark'>
-              <FaGithub /> Code
+              <FaRocket /> Demo
             </Button>
-
           </a>
-        </CardFooter>
-      </Card>
+        )}
+
+        <a href={codeUrl} target="_blank" rel="noreferrer">
+          <Button variant='dark'>
+            <FaGithub /> Code
+          </Button>
+
+        </a>
+      </div>
     </div>
   );
 }
