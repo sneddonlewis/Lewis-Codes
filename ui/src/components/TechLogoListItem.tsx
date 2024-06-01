@@ -11,20 +11,31 @@ interface TechLogoProps {
 
 
 export const TechStack: React.FC<TechLogoListItemProps> = ({ techList }) => {
+  const listStyle: React.CSSProperties = {
+    listStyleType: 'none',
+    marginLeft: '0',
+    padding: '5px',
+    borderRadius: '1rem',
+    backgroundColor: 'rgba(var(--bs-tertiary-bg-rgb), 0.15)',
+  }
   return (
-    <ul style={{ listStyleType: 'none', marginLeft: '0', paddingLeft: '0' }}>
+    <ul style={listStyle}>
       { techList.map((i: string) => <TechLogo key={i} logo={i} />) }
     </ul>
   )
 }
 
 const TechLogo: React.FC<TechLogoProps> = ({ logo }) =>  {
+  const listItemStyle: React.CSSProperties = {
+    margin: '5px',
+    display: 'inline',
+  }
   const image = logos[logo]
   if (!image) {
     return <></>
   }
   return (
-    <li key={logo} style={{ margin: "5px", display: 'inline' }}>
+    <li key={logo} style={listItemStyle}>
       <img
         src={image}
         alt={`${logo} logo`}
