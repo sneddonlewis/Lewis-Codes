@@ -1,4 +1,3 @@
-import "./Icons.css";
 import { FaGithub, FaLinkedin, FaRegEnvelope } from "react-icons/fa";
 
 
@@ -6,7 +5,7 @@ const Icons = () => {
 	return (
 		<div className="wrapper">
 			<a
-				className="icon github"
+				className="icon"
 				href="https://github.com/sneddonlewis"
 				target="_blank"
 				rel="noreferrer"
@@ -17,7 +16,7 @@ const Icons = () => {
 				</span>
 			</a>
 			<a
-				className="icon linkedin-in"
+				className="icon"
 				href="https://www.linkedin.com/in/lsneddoncodes/"
 				target="_blank"
         rel="noreferrer"
@@ -28,7 +27,7 @@ const Icons = () => {
         </span>
         </a>
       <a
-        className="icon email"
+        className="icon"
         href="#contact"
       >
         <div className="tooltip">Get in touch</div>

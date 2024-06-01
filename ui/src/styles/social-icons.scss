@@ -1,3 +1,5 @@
+@import './colors';
+
 .wrapper {
     display: inline-flex;
 }
@@ -58,30 +60,14 @@
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
 
-.wrapper .github:hover,
-.wrapper .github:hover .tooltip,
-.wrapper .github:hover .tooltip::before {
-    background-color: #333333;
-    color: #ffffff;
+.wrapper .icon:hover,
+.wrapper .icon:hover .tooltip,
+.wrapper .icon:hover .tooltip::before {
+    background-color: $primary;
+    color: #222426;
 }
 
-.wrapper .linkedin-in:hover,
-.wrapper .linkedin-in:hover .tooltip,
-.wrapper .linkedin-in:hover .tooltip::before {
-    background-color: #0077B5;
-    color: #ffffff;
-}
-
-.wrapper .email:hover,
-.wrapper .email:hover .tooltip,
-.wrapper .email:hover .tooltip::before {
+.wrapper .icon {
     background-color: #222426;
-    color: #F48024;
-}
-
-.wrapper .twitter:hover,
-.wrapper .twitter:hover .tooltip,
-.wrapper .twitter:hover .tooltip::before {
-    background-color: #55ACEE;
-    color: #ffffff;
+    color: $primary;
 }
