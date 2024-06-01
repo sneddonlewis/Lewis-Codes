@@ -1,5 +1,6 @@
 import React, { FormEvent, useState } from "react"
 import { Button, Form } from "react-bootstrap"
+import { Loading } from "./Loading"
 
 type MessagePostRequest = {
   email: string,
@@ -82,6 +83,7 @@ export const Contact: React.FC = () => {
 
   if (loading) {
     return (
+      <Loading />
     )
   }
 
