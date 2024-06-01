@@ -5,6 +5,38 @@ interface TechLogoListItemProps {
   techList: string[]
 }
 
+interface TechLogoProps {
+  logo: string
+}
+
+
+export const TechStack: React.FC<TechLogoListItemProps> = ({ techList }) => {
+  return (
+    <ul style={{ listStyleType: 'none', marginLeft: '0', paddingLeft: '0' }}>
+      { techList.map((i: string) => <TechLogo key={i} logo={i} />) }
+    </ul>
+  )
+}
+
+const TechLogo: React.FC<TechLogoProps> = ({ logo }) =>  {
+  const image = logos[logo]
+  if (!image) {
+    return <></>
+  }
+  return (
+    <li key={logo} style={{ margin: "5px", display: 'inline' }}>
+      <img
+        src={image}
+        alt={`${logo} logo`}
+        style={{
+          maxWidth: '1.5rem',
+          height: 'auto',
+        }}
+      />
+    </li>
+  )
+}
+
 export const TechLogoList: React.FC<TechLogoListItemProps> = ({ techList }) => {
   return (
     <ul style={{ listStyleType: 'none', marginLeft: '0', paddingLeft: '0' }}>

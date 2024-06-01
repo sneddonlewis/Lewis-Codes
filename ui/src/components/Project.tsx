@@ -1,7 +1,7 @@
 import { FaGithub, FaRocket } from 'react-icons/fa';
 import { ProjectDetail } from '../types/ProjectTypes';
-import { TechLogoList } from './TechLogoListItem';
-import { Button, Card, CardBody, CardFooter, CardHeader, CardText, CardTitle } from 'react-bootstrap';
+import { Button, Card, CardBody, CardFooter, CardHeader, CardText } from 'react-bootstrap';
+import { TechStack } from './TechLogoListItem';
 
 
 function Project(props: ProjectDetail) {
@@ -11,12 +11,12 @@ function Project(props: ProjectDetail) {
     <div style={{ marginTop: '2rem' }} >
       <Card>
         <CardHeader>
-          <CardTitle>
-            {title}
-          </CardTitle>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <h4>{title}</h4>
+            <TechStack techList={techStack} />
+          </div>
         </CardHeader>
         <CardBody>
-          <TechLogoList techList={techStack} />
           <CardText>{description}</CardText>
         </CardBody>
         <CardFooter>
