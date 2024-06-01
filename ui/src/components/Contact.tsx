@@ -12,7 +12,22 @@ type MessageResponse = {
 }
 
 export const Contact: React.FC = () => {
+
+  const [serverResponse, setServerResponse] = useState<MessageResponse | undefined>(undefined)
+  const [loading, setLoading] = useState(false)
+
+  const [msg, setMsg] = useState('')
+  const [email, setEmail] = useState('')
+
+  const [emailError, setEmailError] = useState<string | undefined>(undefined)
+  const [msgError, setMsgError] = useState<string | undefined>(undefined)
+
+  const msgId = 'contactFormMessageId'
+  const emailId = 'contactFormEmailId'
+  const basicEmailRegex = new RegExp(/\S+@\S+\.\S+/)
+
   const postMessage = (request: MessagePostRequest) => {
+    setLoading(true)
     const apiUrl = 'https://24frvheey0.execute-api.eu-west-2.amazonaws.com/prod/message'
     fetch(apiUrl, {
       method: 'Post',
@@ -24,19 +39,8 @@ export const Contact: React.FC = () => {
     .then(response => response.json())
     .then(body => setServerResponse(body))
     .catch(err => console.error(err))
+    .finally(() => setLoading(false))
   }
-
-  const [serverResponse, setServerResponse] = useState<MessageResponse | undefined>(undefined)
-
-  const [msg, setMsg] = useState('')
-  const [email, setEmail] = useState('')
-
-  const [emailError, setEmailError] = useState<string | undefined>(undefined)
-  const [msgError, setMsgError] = useState<string | undefined>(undefined)
-
-  const msgId = 'contactFormMessageId'
-  const emailId = 'contactFormEmailId'
-  const basicEmailRegex = new RegExp(/\S+@\S+\.\S+/)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     if (e.target.id === emailId) {
@@ -74,6 +78,11 @@ export const Contact: React.FC = () => {
       email: email,
       message: msg,
     })
+  }
+
+  if (loading) {
+    return (
+    )
   }
 
   if (serverResponse) {
