@@ -17,6 +17,11 @@ export const Contact: React.FC = () => {
   const emailId = 'contactFormEmailId'
   const basicEmailRegex = new RegExp(/\S+@\S+\.\S+/)
 
+  const buttonContainer: React.CSSProperties = {
+    display: 'flex',
+    justifyContent: 'flex-end',
+  }
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     if (e.target.id === emailId) {
       setEmail(e.target.value)
@@ -99,13 +104,15 @@ export const Contact: React.FC = () => {
           {msgError && <small className="text-danger">{msgError}</small>}
         </Form.Group>
 
-        <Button
-          variant="primary" 
-          type="submit"
-          onClick={handleSubmit}
-        >
-          Send
-        </Button>
+        <div style={buttonContainer}>
+          <Button
+            variant="primary" 
+            type="submit"
+            onClick={handleSubmit}
+          >
+            Send
+          </Button>
+        </div>
         {serverResponse && 
           <div>
             <small className="text-success">{JSON.stringify(serverResponse)}</small>
