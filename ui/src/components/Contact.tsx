@@ -1,21 +1,11 @@
 import React, { FormEvent, useState } from "react"
 import { Button, Form } from "react-bootstrap"
 import { Loading } from "./Loading"
-
-type MessagePostRequest = {
-  email: string,
-  message: string
-}
-
-type MessageResponse = {
-  message_status: string,
-  message_body: MessagePostRequest,
-}
+import { MessagePostRequest } from "../types/api-models"
+import { usePostMessage } from "../hooks/usePostMessage"
 
 export const Contact: React.FC = () => {
-
-  const [serverResponse, setServerResponse] = useState<MessageResponse | undefined>(undefined)
-  const [loading, setLoading] = useState(false)
+  const { loading, serverResponse, postMessage } = usePostMessage()
 
   const [msg, setMsg] = useState('')
   const [email, setEmail] = useState('')
@@ -26,22 +16,6 @@ export const Contact: React.FC = () => {
   const msgId = 'contactFormMessageId'
   const emailId = 'contactFormEmailId'
   const basicEmailRegex = new RegExp(/\S+@\S+\.\S+/)
-
-  const postMessage = (request: MessagePostRequest) => {
-    setLoading(true)
-    const apiUrl = 'https://24frvheey0.execute-api.eu-west-2.amazonaws.com/prod/message'
-    fetch(apiUrl, {
-      method: 'Post',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(request),
-    })
-    .then(response => response.json())
-    .then(body => setServerResponse(body))
-    .catch(err => console.error(err))
-    .finally(() => setLoading(false))
-  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     if (e.target.id === emailId) {
@@ -74,11 +48,12 @@ export const Contact: React.FC = () => {
     if (!valid) {
       return
     }
+    const postRequest: MessagePostRequest = {
+      email: email!,
+      message: msg!,
+    }
 
-    postMessage({
-      email: email,
-      message: msg,
-    })
+    postMessage(postRequest)
   }
 
   if (loading) {
