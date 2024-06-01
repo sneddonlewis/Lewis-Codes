@@ -8,7 +8,7 @@ function Project(props: ProjectDetail) {
   const { title, techStack, description, launchUrl, codeUrl } = props
 
   return (
-    <>
+    <div style={{ marginTop: '2rem' }} >
       <Card>
         <CardHeader>
           <CardTitle>
@@ -36,7 +36,7 @@ function Project(props: ProjectDetail) {
           </a>
         </CardFooter>
       </Card>
-    </>
+    </div>
   );
 }
 
