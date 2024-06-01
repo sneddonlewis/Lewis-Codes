@@ -1,7 +1,14 @@
-import { projects } from "../data/ProjectsData";
+import { useEffect } from 'react';
+import { useGetProjects } from '../hooks/useGetProjects';
 import Project from './Project';
 
 export const ProjectList = () => {
+  const { projects, getProjects } = useGetProjects()
+
+  useEffect(() => {
+    getProjects()
+  }, [])
+
   return (
     <>
     <h1>Projects</h1>

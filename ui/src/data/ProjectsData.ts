@@ -1,6 +1,6 @@
 import { ProjectDetail } from "../types/ProjectTypes";
 
-export const projects: Array<ProjectDetail> = [
+export const projectData: Array<ProjectDetail> = [
     {
         title: "Battleships",
         description: "CLI Battleships Game",
