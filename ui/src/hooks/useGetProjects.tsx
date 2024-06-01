@@ -1,12 +1,19 @@
 import { useState } from "react";
 import { ProjectDetail } from "../types/ProjectTypes";
-import { projectData } from "../data/ProjectsData";
 
 export const useGetProjects = () => {
+  const dataUri = 'https://sneddsy-project-data.s3.eu-west-2.amazonaws.com/projects.json'
   const [projects, setProjects] = useState<ProjectDetail[]>([])
 
   const getProjects = () => {
-    setProjects(projectData)
+    fetch(dataUri, {
+      method: 'Get',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    })
+      .then(response => response.json())
+      .then(setProjects)
   }
 
   return { projects, getProjects }
