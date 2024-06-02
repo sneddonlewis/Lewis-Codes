@@ -69,7 +69,7 @@ const TechLogoListItem: React.FC<TechLogoListItemProps> = ({ techList }) => {
       return <></>
     }
     return (
-      <li key={i} style={{ marginTop: '1rem', display: 'inline' }}>
+      <li key={i} style={{ marginTop: '1rem', marginRight: '3px', display: 'inline' }}>
         <a href={pluralsightSkillsPage}> 
           <img
             src={source}
