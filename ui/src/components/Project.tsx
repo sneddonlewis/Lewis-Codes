@@ -1,5 +1,5 @@
 import { FaGithub, FaRocket } from 'react-icons/fa';
-import { ProjectDetail } from '../types/ProjectTypes';
+import { ProjectDetail } from '../types';
 import { Button } from 'react-bootstrap';
 import { TechStack } from './TechLogoListItem';
 

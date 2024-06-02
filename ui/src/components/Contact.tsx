@@ -1,7 +1,7 @@
 import React, { FormEvent, useState } from "react"
 import { Button, Form } from "react-bootstrap"
 import { Loading } from "./Loading"
-import { MessagePostRequest } from "../types/api-models"
+import { MessagePostRequest } from "../types"
 import { usePostMessage } from "../hooks/usePostMessage"
 
 export const Contact: React.FC = () => {

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MessagePostRequest, MessageResponse } from '../types/api-models';
+import { MessagePostRequest, MessageResponse } from '../types';
 
 export const usePostMessage = () => {
 
