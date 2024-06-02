@@ -6,6 +6,7 @@ import { usePostMessage } from "../hooks/usePostMessage"
 
 
 const buttonContainer: React.CSSProperties = {
+  marginTop: '1rem',
   display: 'flex',
   justifyContent: 'flex-end',
 }
@@ -81,9 +82,9 @@ export const Contact: React.FC = () => {
 
   return (
     <>
-      <h1>Send me a message</h1>
-      <Form>
-        <Form.Group className="mb-3" controlId={emailId}>
+      <h2>Send me a message</h2>
+      <Form style={{ margin: '2rem' }}>
+        <Form.Group controlId={emailId}>
           <Form.Label>Email address</Form.Label>
           <Form.Control
             type="email"
@@ -94,7 +95,7 @@ export const Contact: React.FC = () => {
           {emailError && <small className="text-danger">{emailError}</small>}
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId={msgId}>
+        <Form.Group controlId={msgId}>
           <Form.Label>Message</Form.Label>
           <Form.Control 
             as="textarea" 

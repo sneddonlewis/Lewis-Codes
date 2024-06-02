@@ -4,21 +4,24 @@ import { TechLogoList } from "./TechLogoListItem";
 const pluralsightSkillsPage = "https://app.pluralsight.com/profile/lewis-sneddon";
 
 const pluralsightLinkStyle: React.CSSProperties = {
-  textAlign: 'center',
-  marginBottom: '5rem',
+  marginBottom: '2rem',
+  marginLeft: '2rem',
 }
 
 export const Skills: React.FC = () => (
   <div>
+    <h2>Skills</h2>
+
     <div style={pluralsightLinkStyle}>
-      <p className="h6">Verified skills from <a
+      <small>Verified skills from <a
         target="_blank" 
         rel="noreferrer" 
         href={pluralsightSkillsPage}
       >Pluralsight</a>
-      </p>
+      </small>
     </div>
-    <p className="h6">Frontend</p>
+
+    <h3>Frontend</h3>
     <TechLogoList techList={[
       'ts',
       'js',
@@ -26,7 +29,7 @@ export const Skills: React.FC = () => (
       'angular',
     ]} />
 
-    <p className="h6">Backend</p>
+    <h3>Backend</h3>
     <TechLogoList techList={[
       'csharp',
       'cpp',
@@ -35,13 +38,13 @@ export const Skills: React.FC = () => (
       'rust',
     ]} />
 
-    <p className="h6">Cloud</p>
+    <h3>Cloud</h3>
     <TechLogoList techList={[
       'azure',
       'aws',
     ]} />
 
-    <p className="h6">Database</p>
+    <h3>Database</h3>
     <TechLogoList techList={[
       'postgresql'
     ]} />

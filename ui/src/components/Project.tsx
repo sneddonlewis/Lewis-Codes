@@ -7,7 +7,7 @@ import React from 'react';
 const panelBoxShadow = '0 2px 4px rgba(0, 0, 0, 0.2), 0 6px 10px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(0, 0, 0, 0.1)'
 
 const projectContainerStyle: React.CSSProperties = {
-  marginTop: '2rem',
+  margin: '2rem',
   borderRadius: '10px',
   backgroundColor: 'var(--bs-body-bg)',
   boxShadow: panelBoxShadow,

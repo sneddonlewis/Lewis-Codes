@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaRegEnvelope } from "react-icons/fa";
 
 
 export const Icons: React.FC = () => (
-  <div className="wrapper">
+  <div className="wrapper" style={{ margin: '1rem' }}>
     <a
       className="icon"
       href="https://github.com/sneddonlewis"

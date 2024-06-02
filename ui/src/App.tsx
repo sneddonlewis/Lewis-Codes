@@ -1,10 +1,10 @@
-import { Scrollspy } from './components/Scrollspy';
+import { Home } from './pages/Home.page';
 
 function App() {
   return (
     <>
       <div className='background'>
-        <Scrollspy />
+        <Home />
       </div>
     </>
   );

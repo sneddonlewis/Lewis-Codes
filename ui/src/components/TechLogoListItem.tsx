@@ -48,7 +48,7 @@ const TechLogo: React.FC<TechLogoProps> = ({ logo }) =>  {
 }
 
 export const TechLogoList: React.FC<TechLogoListItemProps> = ({ techList }) => (
-  <ul style={{ listStyleType: 'none', marginLeft: '0', paddingLeft: '0' }}>
+  <ul style={{ listStyleType: 'none', margin: '2rem', padding: '0' }}>
     <TechLogoListItem techList={techList} />
   </ul>
 )
@@ -58,6 +58,7 @@ const techLogoItemStyle: React.CSSProperties = {
   backgroundColor: 'rgba(100, 100, 100, 0.1)',
   borderRadius: '5px',
   padding: '5px',
+  marginTop: '5px',
 }
 
 const TechLogoListItem: React.FC<TechLogoListItemProps> = ({ techList }) => {
@@ -68,7 +69,7 @@ const TechLogoListItem: React.FC<TechLogoListItemProps> = ({ techList }) => {
       return <></>
     }
     return (
-      <li key={i} style={{ margin: "5px", display: 'inline' }}>
+      <li key={i} style={{ marginTop: '1rem', display: 'inline' }}>
         <a href={pluralsightSkillsPage}> 
           <img
             src={source}
