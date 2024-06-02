@@ -1,7 +1,8 @@
+import React from 'react';
 import { Certifications } from "./Certifications";
 import Icons from "./Icons";
 
-export const About = () => {
+export const About: React.FC = () => {
 	return (
 		<>
       <div>

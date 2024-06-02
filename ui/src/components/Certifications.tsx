@@ -1,6 +1,7 @@
+import React from "react";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
 
-export const Certifications = () => {
+export const Certifications: React.FC = () => {
 	return (
 		<div>
 				<div>

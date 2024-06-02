@@ -2,9 +2,10 @@ import { FaGithub, FaRocket } from 'react-icons/fa';
 import { ProjectDetail } from '../types';
 import { Button } from 'react-bootstrap';
 import { TechStack } from './TechLogoListItem';
+import React from 'react';
 
 
-function Project(props: ProjectDetail) {
+export const Project: React.FC<ProjectDetail> = (props) => {
   const { title, techStack, description, launchUrl, codeUrl } = props
 
   const panelBoxShadow = '0 2px 4px rgba(0, 0, 0, 0.2), 0 6px 10px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(0, 0, 0, 0.1)'
@@ -64,5 +65,3 @@ function Project(props: ProjectDetail) {
     </div>
   );
 }
-
-export default Project;

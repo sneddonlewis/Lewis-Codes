@@ -1,7 +1,8 @@
+import React from "react";
 import { FaGithub, FaLinkedin, FaRegEnvelope } from "react-icons/fa";
 
 
-const Icons = () => {
+export const Icons: React.FC = () => {
 	return (
 		<div className="wrapper">
 			<a

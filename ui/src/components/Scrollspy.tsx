@@ -1,12 +1,12 @@
+import React, { useEffect, useState } from "react"
 import { Container, Nav, Navbar } from "react-bootstrap"
 import { About } from "./About"
 import { ProjectList } from "./ProjectList"
 import { Skills } from "./Skills"
-import React, { useEffect, useState } from "react"
 import { Contact } from "./Contact"
 import { FaArrowUp } from "react-icons/fa"
 
-export const Scrollspy = () => {
+export const Scrollspy: React.FC = () => {
   const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
