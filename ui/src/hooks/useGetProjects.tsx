@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { ProjectList } from "../types";
 
+const dataUri = 'https://sneddsy-project-data.s3.eu-west-2.amazonaws.com/projects.json'
+
 export const useGetProjects = () => {
-  const dataUri = 'https://sneddsy-project-data.s3.eu-west-2.amazonaws.com/projects.json'
   const [projects, setProjects] = useState<ProjectList>([])
 
   const getProjects = () => {

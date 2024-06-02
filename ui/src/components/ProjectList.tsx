@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useGetProjects } from '../hooks/useGetProjects';
 import { Project } from './Project';
 
-export const ProjectList = () => {
+export const ProjectList: React.FC = () => {
   const { projects, getProjects } = useGetProjects()
 
   useEffect(() => {

@@ -4,6 +4,12 @@ import { Loading } from "./Loading"
 import { MessagePostRequest } from "../types"
 import { usePostMessage } from "../hooks/usePostMessage"
 
+
+const buttonContainer: React.CSSProperties = {
+  display: 'flex',
+  justifyContent: 'flex-end',
+}
+
 export const Contact: React.FC = () => {
   const { loading, serverResponse, postMessage } = usePostMessage()
 
@@ -16,11 +22,6 @@ export const Contact: React.FC = () => {
   const msgId = 'contactFormMessageId'
   const emailId = 'contactFormEmailId'
   const basicEmailRegex = new RegExp(/\S+@\S+\.\S+/)
-
-  const buttonContainer: React.CSSProperties = {
-    display: 'flex',
-    justifyContent: 'flex-end',
-  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     if (e.target.id === emailId) {

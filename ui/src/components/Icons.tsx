@@ -2,42 +2,39 @@ import React from "react";
 import { FaGithub, FaLinkedin, FaRegEnvelope } from "react-icons/fa";
 
 
-export const Icons: React.FC = () => {
-	return (
-		<div className="wrapper">
-			<a
-				className="icon"
-				href="https://github.com/sneddonlewis"
-				target="_blank"
-				rel="noreferrer"
-			>
-				<div className="tooltip">Github</div>
-				<span>
-					<FaGithub />
-				</span>
-			</a>
-			<a
-				className="icon"
-				href="https://www.linkedin.com/in/lsneddoncodes/"
-				target="_blank"
-        rel="noreferrer"
+export const Icons: React.FC = () => (
+  <div className="wrapper">
+    <a
+      className="icon"
+      href="https://github.com/sneddonlewis"
+      target="_blank"
+      rel="noreferrer"
       >
-        <div className="tooltip">LinkedIn</div>
-        <span>
-          <FaLinkedin />
-        </span>
-        </a>
-      <a
-        className="icon"
-        href="#contact"
-      >
-        <div className="tooltip">Get in touch</div>
-        <span>
-          <FaRegEnvelope />
-        </span>
-      </a>
-    </div>
-	);
-};
+      <div className="tooltip">Github</div>
+      <span>
+        <FaGithub />
+      </span>
+    </a>
+    <a
+      className="icon"
+      href="https://www.linkedin.com/in/lsneddoncodes/"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <div className="tooltip">LinkedIn</div>
+      <span>
+        <FaLinkedin />
+      </span>
+    </a>
+    <a
+      className="icon"
+      href="#contact"
+    >
+      <div className="tooltip">Get in touch</div>
+      <span>
+        <FaRegEnvelope />
+      </span>
+    </a>
+  </div>
+)
 
-export default Icons;

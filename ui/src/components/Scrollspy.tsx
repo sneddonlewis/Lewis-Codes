@@ -6,6 +6,23 @@ import { Skills } from "./Skills"
 import { Contact } from "./Contact"
 import { FaArrowUp } from "react-icons/fa"
 
+const scrollSectionContainer: React.CSSProperties = {
+  minHeight: '100vh',
+  paddingTop: '6rem',
+}
+
+const navbarStyles = (scroll: boolean): React.CSSProperties => ({
+  backgroundColor: scroll ? 'rgba(var(--primary-rgb), 0.5)' : 'rgba(var(--primary-rgb), 0.95)',
+  transition: 'background-color 0.3s',
+  backgroundImage: 'linear-gradient(to bottom, rgba(var(--primary-rgb), 0.7), rgba(var(--primary-rgb), 0))',
+  boxShadow: '0 2px 5px rgba(0,0,0,0.2)'
+})
+
+
+const navBrandStyle= (scroll: boolean): React.CSSProperties => ({
+  visibility: scroll ? 'visible' : 'hidden',
+})
+
 export const Scrollspy: React.FC = () => {
   const [scroll, setScroll] = useState(false);
 
@@ -21,22 +38,6 @@ export const Scrollspy: React.FC = () => {
     };
   }, []);
 
-  const navbarStyles = {
-    backgroundColor: scroll ? 'rgba(var(--primary-rgb), 0.5)' : 'rgba(var(--primary-rgb), 0.95)',
-    transition: 'background-color 0.3s',
-    backgroundImage: 'linear-gradient(to bottom, rgba(var(--primary-rgb), 0.7), rgba(var(--primary-rgb), 0))',
-    boxShadow: '0 2px 5px rgba(0,0,0,0.2)'
-  }
-
-  const scrollSectionContainer = {
-    minHeight: '100vh',
-    paddingTop: '6rem',
-  }
-
-  const navBrandStyle: React.CSSProperties = {
-    visibility: scroll ? 'visible' : 'hidden',
-  }
-
   return (
     <>
       <Container>
@@ -46,8 +47,8 @@ export const Scrollspy: React.FC = () => {
           variant="dark"
           fixed="top"
           className="navbar px-3 mb-3"
-          style={navbarStyles}>
-          <Navbar.Brand href="#" style={navBrandStyle}>
+          style={navbarStyles(scroll)}>
+          <Navbar.Brand href="#" style={navBrandStyle(scroll)}>
             <FaArrowUp />
           </Navbar.Brand>
           <Nav className="ms-auto">
