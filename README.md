@@ -31,10 +31,6 @@ npx cdk deploy # will ask for confirmation
 ### UI
 
 - [ ] Scrollspy doesn't activate links in nav bar
-- [x] Certifications aren't links
-- [ ] Update projects ( let's have much less but good quality )
-- [ ] Move projects data to S3 bucket
-- [x] Start screen needs a tidy up ( maybe color the social icons )
 - [ ] Environment variables for dev/prod
 
 ### Contact API
