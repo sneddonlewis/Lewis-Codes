@@ -18,3 +18,9 @@ export type ProjectDetail = {
 	launchUrl?: string;
 	codeUrl: string;
 }
+
+export type CertItem = {
+  title: string,
+  uri: string,
+  badgeSrc: string,
+}
