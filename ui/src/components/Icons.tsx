@@ -11,7 +11,7 @@ export const Icons: React.FC = () => (
       rel="noreferrer"
       >
       <div className="tooltip">Github</div>
-      <span>
+      <span aria-label="link to github">
         <FaGithub />
       </span>
     </a>
@@ -22,7 +22,7 @@ export const Icons: React.FC = () => (
       rel="noreferrer"
     >
       <div className="tooltip">LinkedIn</div>
-      <span>
+      <span aria-label="link to linkedin">
         <FaLinkedin />
       </span>
     </a>
@@ -31,7 +31,7 @@ export const Icons: React.FC = () => (
       href="#contact"
     >
       <div className="tooltip">Get in touch</div>
-      <span>
+      <span aria-label="scroll to contact form">
         <FaRegEnvelope />
       </span>
     </a>

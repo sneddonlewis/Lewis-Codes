@@ -49,7 +49,7 @@ export const Home: React.FC = () => {
           fixed="top"
           className="navbar px-3 mb-3"
           style={navbarStyles(scroll)}>
-          <Navbar.Brand href="#" style={navBrandStyle(scroll)}>
+          <Navbar.Brand href="#" style={navBrandStyle(scroll)} aria-label='scroll to top'>
             <FaArrowUp />
           </Navbar.Brand>
           <Nav className="ms-auto">
